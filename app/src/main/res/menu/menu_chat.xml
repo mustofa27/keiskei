@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alvarisi.keiskeismartsystem.ChatActivity">
+    <item
+        android:id="@+id/action_attach"
+        android:icon="@drawable/icon_camera"
+        android:title="@string/attach_file"
+        app:showAsAction="ifRoom"/>
+</menu>

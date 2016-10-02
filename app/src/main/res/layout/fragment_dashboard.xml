@@ -1,0 +1,226 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.alvarisi.keiskeismartsystem.fragment.DashboardFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:weightSum="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_green_half"
+            android:layout_weight="0.2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="3"
+                android:background="@color/keiskei_dialog_transparant2"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Member: "
+                    android:gravity="left"
+                    android:textSize="14sp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/id_member"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/t_member"
+                    android:gravity="left"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SmartSystem V.1.0"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    android:textColor="@color/keiskei_green" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180sp"
+                android:src="@drawable/user_default_new"
+                android:id="@+id/im_user"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:weightSum="3"
+                >
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="25dp"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome: "
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+            <!-- buton 1 -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                 android:paddingBottom="20dp"
+                android:layout_gravity="right">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="70sp"
+                    android:background="@color/keiskei_dialog_transparant"
+                    android:layout_weight="0.50"
+                    android:text="Beli: "
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10px"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="70sp"
+                    android:background="@color/keiskei_dialog_transparant2"
+                    android:layout_weight="0.50"
+                    android:text="@string/buy"
+                    android:textColor="@color/white"
+                    android:id="@+id/t_buy"
+                    android:layout_marginRight="10px"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:background="@drawable/button_kotak_kuning"
+                    android:layout_weight="0.50"
+                    android:text="@string/voice_box"
+                    android:textColor="@color/white"
+                    android:id="@+id/btn_voicebox"
+                    />
+            </LinearLayout>
+
+            <!-- buton 2 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:paddingBottom="20dp"
+                android:layout_gravity="right">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="70sp"
+                    android:background="@color/keiskei_dialog_transparant"
+                    android:layout_weight="0.50"
+                    android:text="Bonus: "
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10px"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="70sp"
+                    android:background="@color/keiskei_dialog_transparant2"
+                    android:layout_weight="0.50"
+                    android:text="@string/bonus"
+                    android:textColor="@color/white"
+                    android:id="@+id/t_bonus"
+                    android:layout_marginRight="10px"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_kotak_hijau"
+                    android:layout_weight="0.50"
+                    android:text="@string/chat_help"
+                    android:textColor="@color/white"
+                    android:id="@+id/btn_chat"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3sp"
+                android:background="@color/keiskei_dialog_transparant2"
+                android:baselineAligned="false">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingTop="1dp"
+                    android:id="@+id/iv_product_1"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:adjustViewBounds="true"
+                    android:paddingTop="1dp"
+                    android:id="@+id/iv_product_2"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:paddingTop="1dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/iv_product_3"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

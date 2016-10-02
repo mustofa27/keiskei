@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="white" type="color">#FFF</item>
+    <item name="keiskei_green" type="color">#0C3121</item>
+    <item name="keiskei_yellow" type="color">#f0b910</item>
+    <item name="keiskei_red" type="color">#bd0707</item>
+    <item name="keiskei_green_young" type="color">#567c05</item>
+    <item name="keiskei_green_young_v" type="color">#98a65a</item>
+
+    <item name="keiskei_greennav" type="color">#0C3121</item>
+    <item name="keiskei_dialog_transparant" type="color">#960d3323</item>
+    <item name="keiskei_dialog_transparant2" type="color">#600d3323</item>
+    <item name="keiskei_dialog_transparant3" type="color">#30f0b910</item>
+
+    <item name="keiskei_dialog_white_transparant" type="color">#90ffffff</item>
+    <item name="keiskei_profile_list_a" type="color">#b8c6ab</item>
+    <item name="keiskei_profile_list_b" type="color">#e9ecd9</item>
+    <item name="keiskei_notif_bg" type="color">#e8f0cd</item>
+    <item name="keiskei_chat_action" type="color">#EEF0EF</item>
+    <item name="keiskei_chat_a" type="color">#dfebe6</item>
+    <item name="keiskei_chat_b" type="color">#ebebeb</item>
+    <item name="keiskei_chat_bg" type="color">#E6EAD3</item>
+    <item name="keiskei_landing_bg" type="color">#A2A2A2</item>
+    <item name="keiskei_dark_grey" type="color">#8c8c8c</item>
+    <item name="keiskei_green_date" type="color">#346F1D</item>
+
+
+</resources>
