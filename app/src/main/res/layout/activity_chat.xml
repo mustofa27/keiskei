@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:weightSum="1"
     android:background="#E0E4CB"
-    tools:context="com.alvarisi.keiskeismartsystem.ChatActivity">
+    tools:context="com.keiskeismartsystem.ChatActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"

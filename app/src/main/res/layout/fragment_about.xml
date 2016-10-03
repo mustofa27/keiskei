@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/keiskei_notif_bg"
-    tools:context="com.alvarisi.keiskeismartsystem.fragment.AboutFragment">
+    tools:context="com.keiskeismartsystem.fragment.AboutFragment">
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"

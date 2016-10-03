@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/keiskei_greennav"
-    tools:context="com.alvarisi.keiskeismartsystem.VoiceBoxActivity">
+    tools:context="com.keiskeismartsystem.VoiceBoxActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"

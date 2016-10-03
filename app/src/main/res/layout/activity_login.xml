@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/bg_green"
-    tools:context="com.alvarisi.keiskeismartsystem.LoginActivity">
+    tools:context="com.keiskeismartsystem.LoginActivity">
 
     <ImageView
         android:layout_width="match_parent"

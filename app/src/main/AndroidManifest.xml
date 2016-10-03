@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.alvarisi.keiskeismartsystem" >
+    package="com.keiskeismartsystem" >
 
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission
-        android:name="com.innvaderstudio.qcare.C2D_MESSAGE"
-        android:protectionLevel="signature" />
+
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -93,7 +91,7 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.alvarisi.keiskeismartsystem.LandingActivity" />
+                android:value="com.keiskeismartsystem.LandingActivity" />
         </activity>
         <activity
             android:name=".ChatActivity"
@@ -103,7 +101,7 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.alvarisi.keiskeismartsystem.LandingActivity" />
+                android:value="com.keiskeismartsystem.LandingActivity" />
         </activity>
 
         <receiver
@@ -111,7 +109,7 @@
             android:enabled="true"
             android:exported="true" >
             <intent-filter>
-                <action android:name="com.alvarisi.keiskeismartsystem.GCMMESSAGE" />
+                <action android:name="com.keiskeismartsystem.GCMMESSAGE" />
             </intent-filter>
         </receiver>
 
@@ -122,7 +120,7 @@
             >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.alvarisi.keiskeismartsystem.MainActivity" />
+                android:value="com.keiskeismartsystem.MainActivity" />
         </activity>
         <provider android:authorities="com.facebook.app.FacebookContentProvider727802654022279"
             android:name="com.facebook.FacebookContentProvider"

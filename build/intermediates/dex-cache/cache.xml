@@ -2,172 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="a78183f30e769a98ab4820794f597763088d3065">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-63bf56640c1e1a0e158f54d077efada47e1e88fa.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-1b7241a84438aaa180b9974db9fa3c4b590fb561.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-712df06435a46e8cf5c06b27bfaddc9b2be177cf.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-f838caeec46baa440390ee63763d3eea83b24a93.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-49c3ece6bdc70f56c91975ff727eabcd96e9dda7.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-2a063c175545571570bb148ad8a5eb032eaacc67.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-6c52d12b75e5ce8f80447f044e5f356b81370ccc.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-3be96aacf12fb3cf4d00e2e4a9316d749f261eac.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-0a51efec710578d91f4d3541288293ced09efd70.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-f9a94f24a0baad96bffcad46d67bb457931988ae.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-f5a1ec40cf6812dd8e59440234097d656abb6515.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d405025c600055237c171a0bbabaa49d69696573">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-1c9c0c27f3f34cb8216e0bf754fd8a861bbb189d.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-a350db9e1fb6f333896043778eaffca4fa9ff42a.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-73b08444a060b64a7b4b2ce13a13c234e9962f45.jar" />
-    </item>
-    <item
-        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-ca40fee9e9d9aa0669b639551f5a28ecbe412c35.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-107564bce6191bceb62d86865ab9cb449d746622.jar" />
-    </item>
-    <item
-        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.9-d202a3d91948d53cb6e261761529d2a1b7a01b09.jar" />
-    </item>
-    <item
-        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/httpclient-4.3.6-129363fe9df69871ccdfb76724ed792ed2de9656.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/libs/internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-458959428ff0a420d2d93b227b327706595ff95f.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-169f94b1bb42c1ab56b2600bfab39c922225be6b.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-edf5ae6cdd5e42659ce56bb01c9ea38e7ac605d9.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-dfbd52ec7561f42d04b5b072bb0dc3030ab6df2c.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-3319dc47e9a5d03d9f3e9c2660678ea8524a5017.jar" />
-    </item>
-    <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-ab3e089b3c8931e39d360c4ece9dd3cdcb8a170f.jar" />
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-162dd5ce54a5185cbcd0630c75fd4f5b6c97bb36.jar" />
     </item>
     <item
         jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.5.0/jars/classes.jar"
@@ -177,6 +16,13 @@
         <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-223f721427b3d854a2d74886ab72da611b65b108.jar" />
     </item>
     <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-712df06435a46e8cf5c06b27bfaddc9b2be177cf.jar" />
+    </item>
+    <item
         jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -184,25 +30,95 @@
         <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-ac532d166d5b864ac96214a096ac9672835a3fda.jar" />
     </item>
     <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar"
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-ab3e089b3c8931e39d360c4ece9dd3cdcb8a170f.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-f9a94f24a0baad96bffcad46d67bb457931988ae.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-9329f12ff388034d643c8e6740bb6d7b1212b971.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-95fdc6129666d033fc10470b5123d1e1df72dd8b.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-8d4325a4f9e0cde636eca078bfa9a59258337655.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-e9c9837b5af87d3a79269acdda294cbd5f8a291c.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-f9c09bbf0d3e3fd93e949b540b0b6ccdba0e6a16.jar" />
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-5f5cea9f3de09d65c5265038ab3c3bcd9e38050d.jar" />
     </item>
     <item
-        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/jars/classes.jar"
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-2f552763bf94107a6d0f74b4bb3511ae865b2b9d.jar" />
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-63bf56640c1e1a0e158f54d077efada47e1e88fa.jar" />
     </item>
     <item
-        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-e598158145328eaaf19e4f1e15a9e3b371fa2a6e.jar" />
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-c970c610ce9440473cc3bd0550f2969d25f17918.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-0cab4d04bda60df887dbccd35b39eca8ed4fd2d3.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-6c52d12b75e5ce8f80447f044e5f356b81370ccc.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-edf5ae6cdd5e42659ce56bb01c9ea38e7ac605d9.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-a350db9e1fb6f333896043778eaffca4fa9ff42a.jar" />
     </item>
     <item
         jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/jars/classes.jar"
@@ -212,6 +128,48 @@
         <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-54ce2eeb0b0ec34e5a7203e98b887fcda1d24b3b.jar" />
     </item>
     <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-3350b6b1702b6a49cde72e1238b70ea07673c6fb.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-a0ea4aeb2100ad25627403700a3b82a71c1e1786.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-d97d92f932dffaf8103043d803583c5494c30875.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-0a51efec710578d91f4d3541288293ced09efd70.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-17ad4925160dbb1a9dd2e3c67d7cf2766e59a6e9.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-f838caeec46baa440390ee63763d3eea83b24a93.jar" />
+    </item>
+    <item
         jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -219,11 +177,235 @@
         <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-519f91b779dbc3e99baa84cc2797820adc72967d.jar" />
     </item>
     <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-ec26e26c832203c1622a6d6279007239bc1075b5.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-c31db80c75f609ad4cb73cd193966782b4af91ce.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-06cb86d7b2643269324265a4d66817f8312f49fc.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-dfbd52ec7561f42d04b5b072bb0dc3030ab6df2c.jar" />
+    </item>
+    <item
+        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-ca40fee9e9d9aa0669b639551f5a28ecbe412c35.jar" />
+    </item>
+    <item
+        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/httpclient-4.3.6-129363fe9df69871ccdfb76724ed792ed2de9656.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-ac741820738ef29a88115ea11406e15a135ba26a.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-93321824c30394f23c8afd3e6abae4ce0524191f.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-6cde66f17817569d38270135deafc24ce6ea45e0.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-1c9c0c27f3f34cb8216e0bf754fd8a861bbb189d.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-0968902fe9ad6b2a04edacb6e3998f9eff92f86c.jar" />
+    </item>
+    <item
+        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-e598158145328eaaf19e4f1e15a9e3b371fa2a6e.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-f5a1ec40cf6812dd8e59440234097d656abb6515.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-2f552763bf94107a6d0f74b4bb3511ae865b2b9d.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-73b08444a060b64a7b4b2ce13a13c234e9962f45.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-82782f3e613470f4add2c4d24889b1acfa84a275.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-3374f2eca27e5a1bd5491475405daf16cb61a4a9.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-4326ebdd1c346bac482516b9b9f4f79f98198f83.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-3be96aacf12fb3cf4d00e2e4a9316d749f261eac.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-8a34a3a0d00a3431c6ce7d4ca7403a461f4942ab.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-1b7241a84438aaa180b9974db9fa3c4b590fb561.jar" />
+    </item>
+    <item
         jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
         <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/gson-2.4-3e0e1fbbfbad79287d2f3f72871a49e0316e6c6a.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-6b5278736ffd69d30fc1c074870b63b6ce3583a0.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-f9c09bbf0d3e3fd93e949b540b0b6ccdba0e6a16.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-19729cd5a58617a9cf2464bb1ab63fbb22d1de1b.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-458959428ff0a420d2d93b227b327706595ff95f.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-107564bce6191bceb62d86865ab9cb449d746622.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-49c3ece6bdc70f56c91975ff727eabcd96e9dda7.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-169f94b1bb42c1ab56b2600bfab39c922225be6b.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/Users/apple/Desktop/Latest Project/smart_system/keiskei_smart/app/build/intermediates/pre-dexed/debug/classes-65b55daf3d8373167306dd05fdf359586a3875ab.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-2a063c175545571570bb148ad8a5eb032eaacc67.jar" />
+    </item>
+    <item
+        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.9-d202a3d91948d53cb6e261761529d2a1b7a01b09.jar" />
+    </item>
+    <item
+        jar="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="/Volumes/LapanData/Latest PROJ/KEISKEI/Latest Source/Keiskei/app/build/intermediates/pre-dexed/debug/classes-3319dc47e9a5d03d9f3e9c2660678ea8524a5017.jar" />
     </item>
 
 </items>

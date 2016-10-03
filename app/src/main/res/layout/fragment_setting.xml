@@ -5,7 +5,7 @@
     android:layout_gravity="center"
     android:weightSum="1"
     android:background="@drawable/bg_grey"
-    tools:context="com.alvarisi.keiskeismartsystem.fragment.SettingFragment">
+    tools:context="com.keiskeismartsystem.fragment.SettingFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
