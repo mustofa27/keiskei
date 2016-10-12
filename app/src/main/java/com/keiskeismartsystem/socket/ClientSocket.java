@@ -14,7 +14,7 @@ import java.util.Map;
  * Created by zeta on 10/13/2015.
  */
 public class ClientSocket extends AsyncTask<String, Void, String> {
-    public static final String _base_url = "http://www.ws.keiskei.co.id/index.php/";
+    public static final String _base_url = "http://smartv2.lapantiga.com/";
     public AsyncResponse delegate=null;
 
     private Context context;

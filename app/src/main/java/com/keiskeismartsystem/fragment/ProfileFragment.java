@@ -141,8 +141,8 @@ public class ProfileFragment extends Fragment {
         protected Bitmap doInBackground(String... args) {
 
             try {
-                Log.v("keiskeidebug", "https://www.keiskei.co.id/data/user/photo/" + args[0]);
-                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("https://www.keiskei.co.id/data/user/photo/" + args[0]).getContent());
+                Log.v("keiskeidebug", "http://www.smartv2.lapantiga.com/data/user/photo/" + args[0]);
+                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("http://www.smartv2.lapantiga.com/data/user/photo/" + args[0]).getContent());
 
             } catch (Exception e) {
                 e.printStackTrace();

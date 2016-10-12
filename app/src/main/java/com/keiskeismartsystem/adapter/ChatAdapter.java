@@ -34,7 +34,7 @@ import java.util.List;
  * keiskei smartsystem_V2.
  */
 public class ChatAdapter extends ArrayAdapter<Chat> {
-    public static final String _base_url = "https://www.keiskei.co.id/";
+    public static final String _base_url = "http://www.smartv2.lapantiga.com/";
     private final ArrayList<Chat> chats;
     private Activity context;
     private static class ViewHolder {
@@ -191,8 +191,8 @@ public class ChatAdapter extends ArrayAdapter<Chat> {
 //        protected Bitmap doInBackground(String... args) {
 //
 //            try {
-//                Log.v("keiskeidebug", "https://www.keiskei.co.id/data/chat_mobile/" + args[0]);
-//                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("https://www.keiskei.co.id/data/chat_mobile/" + args[0]).getContent());
+//                Log.v("keiskeidebug", "http://www.smartv2.lapantiga.com/data/chat_mobile/" + args[0]);
+//                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("http://www.smartv2.lapantiga.com/data/chat_mobile/" + args[0]).getContent());
 //
 //            } catch (Exception e) {
 //                e.printStackTrace();

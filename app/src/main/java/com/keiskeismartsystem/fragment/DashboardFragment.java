@@ -41,7 +41,7 @@ import java.util.List;
 import java.util.logging.FileHandler;
 
 public class DashboardFragment extends Fragment {
-    public static final String _base_url = "https://www.keiskei.co.id/";
+    public static final String _base_url = "http://www.smartv2.lapantiga.com/";
     private static ImageView _im_user, _iv_product_1, _iv_product_2, _iv_product_3;
     private static TextView _t_buy, _t_code, _t_bonus;
     private static Button _chat, _voice_box;
@@ -164,8 +164,8 @@ public class DashboardFragment extends Fragment {
         protected Bitmap doInBackground(String... args) {
 
             try {
-                Log.v("keiskeidebug", "https://www.keiskei.co.id/data/user/photo/" + args[0]);
-                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("https://www.keiskei.co.id/data/user/photo/" + args[0]).getContent());
+                Log.v("keiskeidebug", "http://www.smartv2.lapantiga.com/data/user/photo/" + args[0]);
+                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("http://www.smartv2.lapantiga.com/data/user/photo/" + args[0]).getContent());
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -248,7 +248,7 @@ public class DashboardFragment extends Fragment {
                         _productTransact.insert(product);
 
                     }
-                    final String url_t = "https://www.keiskei.co.id/products/detail/";
+                    final String url_t = "http://www.smartv2.lapantiga.com/products/detail/";
                     final List<Product> products = _productTransact.all();
                     Log.v("keiskeidebug", products.get(0).getPhotoExt());
                     Picasso.with(_context).load(_base_url + products.get(0).getPhotoExt())

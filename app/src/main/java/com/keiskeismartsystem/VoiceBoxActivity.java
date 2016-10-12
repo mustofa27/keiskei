@@ -213,7 +213,7 @@ public class VoiceBoxActivity extends AppCompatActivity implements AsyncResponse
             }
         }
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post( "http://www.ws.keiskei.co.id/m/voicebox/storetwo", data, new JsonHttpResponseHandler(){
+        client.post( "http://smartv2.lapantiga.com/m/voicebox/storetwo", data, new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 String resp = "";

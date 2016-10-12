@@ -50,7 +50,7 @@ import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity implements AsyncResponse {
     private static ProgressDialog _progress;
-    private static final String _base_url = "http://www.ws.keiskei.co.id/index.php/";
+    private static final String _base_url = "http://smartv2.lapantiga.com/";
     private static Spinner _city;
 
     private static AppSession _appSession;
@@ -155,7 +155,7 @@ public class RegisterActivity extends AppCompatActivity implements AsyncResponse
             Log.v("keiskeidebug", request.code() + "");
 
             try {
-                URL url = new URL("http://www.ws.keiskei.co.id/index.php/m/init/city");
+                URL url = new URL("http://smartv2.lapantiga.com/m/init/city");
                 in = new BufferedInputStream(url.openStream());
                 File mediaStorageDir = new File(Environment.getExternalStorageDirectory()
                         + "/Android/data/"

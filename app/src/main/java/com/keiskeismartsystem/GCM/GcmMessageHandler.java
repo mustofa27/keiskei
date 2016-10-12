@@ -275,8 +275,8 @@ public class GcmMessageHandler extends GcmListenerService {
         protected Bitmap doInBackground(String... args) {
             Bitmap bitmap_t = null;
             try {
-                Log.v("keiskeidebug", "https://www.keiskei.co.id/data/chat_mobile/" + args[0]);
-                bitmap_t = BitmapFactory.decodeStream((InputStream) new URL("https://www.keiskei.co.id/data/chat_mobile/" + args[0]).getContent());
+                Log.v("keiskeidebug", "http://www.smartv2.lapantiga.com/data/chat_mobile/" + args[0]);
+                bitmap_t = BitmapFactory.decodeStream((InputStream) new URL("http://www.smartv2.lapantiga.com/data/chat_mobile/" + args[0]).getContent());
 
             } catch (Exception e) {
                 e.printStackTrace();
