@@ -30,11 +30,13 @@ import com.keiskeismartsystem.fragment.DashboardFragment;
 import com.keiskeismartsystem.fragment.DetailNotificationFragment;
 import com.keiskeismartsystem.fragment.EditProfilFragment;
 import com.keiskeismartsystem.fragment.NotificationFragment;
+import com.keiskeismartsystem.fragment.ProductList;
 import com.keiskeismartsystem.fragment.ProfileFragment;
 import com.keiskeismartsystem.fragment.SettingFragment;
 import com.keiskeismartsystem.helper.UserSession;
 import com.keiskeismartsystem.model.Chat;
 import com.keiskeismartsystem.model.Notif;
+import com.keiskeismartsystem.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,12 +73,15 @@ public class MainActivity extends AppCompatActivity {
         mTabHost.addTab(mTabHost.newTabSpec("dashboard").setIndicator(null, ContextCompat.getDrawable(this, R.drawable.home)),
                 DashboardFragment.class, b);
         b = new Bundle();
+        b.putString("key", "Products");
+        mTabHost.addTab(mTabHost.newTabSpec("products")
+                .setIndicator(null, ContextCompat.getDrawable(this, R.drawable.notif)), ProductList.class, b);
+        b = new Bundle();
         b.putString("key", "Notification");
         mTabHost.addTab(mTabHost.newTabSpec("notification")
                 .setIndicator(null, ContextCompat.getDrawable(this, R.drawable.notif)), NotificationFragment.class, b);
         b = new Bundle();
         b.putString("key", "Profile");
-
         mTabHost.addTab(mTabHost.newTabSpec("profile").setIndicator(null, ContextCompat.getDrawable(this, R.drawable.profil)),
                 ProfileFragment.class, b);
         b = new Bundle();
@@ -107,12 +112,15 @@ public class MainActivity extends AppCompatActivity {
                     String tabId = "dashboard";
                     switch (a){
                         case 1:
-                            tabId = "notification";
+                            tabId = "products";
                             break;
                         case 2:
-                            tabId = "profile";
+                            tabId = "notification";
                             break;
                         case 3:
+                            tabId = "profile";
+                            break;
+                        case 4:
                             tabId = "setting";
                             break;
                     }
@@ -165,6 +173,10 @@ public class MainActivity extends AppCompatActivity {
             case "dashboard":
                 DashboardFragment fragment = new DashboardFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_container, fragment ).commit();
+                break;
+            case "products":
+                ProductList pFragment = new ProductList();
+                getSupportFragmentManager().beginTransaction().replace(R.id.content_container, pFragment ).commit();
                 break;
             case "notification":
                 NotificationFragment nfragment = new NotificationFragment();
