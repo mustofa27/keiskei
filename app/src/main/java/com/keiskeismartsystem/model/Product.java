@@ -9,7 +9,7 @@ import java.util.Date;
 public class Product implements Serializable {
     public static final String KEY = "PRODUCT_DATA";
     private int _id, _sid;
-    private String _title, _photo_int, _photo_ext, _description, _code;
+    private String _title, _photo_int, _photo_ext, _description, _code, harga, kategori;
     public Product(){
         _code = "";
         _title = "";
