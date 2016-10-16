@@ -59,4 +59,20 @@ public class Product implements Serializable {
     public String getPhotoExt(){
         return this._photo_ext;
     }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
 }

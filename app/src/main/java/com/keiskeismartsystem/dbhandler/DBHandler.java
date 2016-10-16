@@ -11,7 +11,7 @@ import android.util.Log;
  * Created by zeta on 10/15/2015.
  */
 public class DBHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "keiskei.db",
             TABLE_CITY = "cities",
             TABLE_NOTIFICATION = "notifications",
@@ -25,6 +25,8 @@ public class DBHandler extends SQLiteOpenHelper {
             COLUMN_TITLE = "title",
             COLUMN_DESCRIPTION = "description",
             COLUMN_PHOTO = "photo",
+            COLUMN_HARGA = "harga",
+            COLUMN_KATEGORI = "kategori",
             COLUMN_PHOTO_INT = "photo_int",
             COLUMN_PHOTO_EXT = "photo_ext",
             COLUMN_PROVINCE = "ms_province_id",
@@ -51,7 +53,9 @@ public class DBHandler extends SQLiteOpenHelper {
             COLUMN_TITLE + " TEXT, " +
             COLUMN_PHOTO_INT + " TEXT, " +
             COLUMN_PHOTO_EXT + " TEXT, " +
-            COLUMN_DESCRIPTION + " TEXT)"
+            COLUMN_DESCRIPTION + " TEXT, " +
+            COLUMN_HARGA + " TEXT, " +
+            COLUMN_KATEGORI + " TEXT)"
             ;
     private static final String CREATE_TABLE_CHAT = "CREATE TABLE " + TABLE_CHAT + " ( " +
             COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +

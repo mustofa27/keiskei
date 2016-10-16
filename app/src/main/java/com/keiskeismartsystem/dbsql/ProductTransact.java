@@ -31,6 +31,8 @@ public class ProductTransact {
                 product.setDescription(cursor.getString((cursor.getColumnIndex("description"))));
                 product.setPhotoInt(cursor.getString((cursor.getColumnIndex("photo_int"))));
                 product.setPhotoExt(cursor.getString((cursor.getColumnIndex("photo_ext"))));
+                product.setHarga(cursor.getString((cursor.getColumnIndex("harga"))));
+                product.setKategori(cursor.getString((cursor.getColumnIndex("kategori"))));
                 products.add(product);
             }while (cursor.moveToNext());
         }
@@ -61,6 +63,8 @@ public class ProductTransact {
                 product.setDescription(cursor.getString((cursor.getColumnIndex("description"))));
                 product.setPhotoInt(cursor.getString((cursor.getColumnIndex("photo_int"))));
                 product.setPhotoExt(cursor.getString((cursor.getColumnIndex("photo_ext"))));
+                product.setHarga(cursor.getString((cursor.getColumnIndex("harga"))));
+                product.setKategori(cursor.getString((cursor.getColumnIndex("kategori"))));
 
                 products.add(product);
             }while (cursor.moveToNext());
@@ -93,7 +97,8 @@ public class ProductTransact {
             product.setDescription(cursor.getString((cursor.getColumnIndex("description"))));
             product.setPhotoInt(cursor.getString((cursor.getColumnIndex("photo_int"))));
             product.setPhotoExt(cursor.getString((cursor.getColumnIndex("photo_ext"))));
-
+            product.setHarga(cursor.getString((cursor.getColumnIndex("harga"))));
+            product.setKategori(cursor.getString((cursor.getColumnIndex("kategori"))));
         }
         dbHandler.close();
         return product;
@@ -101,18 +106,25 @@ public class ProductTransact {
     }
     public long insert(Product product)
     {
-        DBHandler dbHandler = new DBHandler(this._context, null, null, 1);
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("server_id", product.getSid());
-        contentValues.put("code", product.getCode());
-        contentValues.put("description", product.getDescription());
-        contentValues.put("photo_int", product.getPhotoInt());
-        contentValues.put("photo_ext", product.getPhotoExt());
-        contentValues.put("title", product.getTitle());
+        ArrayList<WhereHelper> whereHelpers = new ArrayList<WhereHelper>();
+        whereHelpers.add(new WhereHelper("id", String.valueOf(product.getId())));
+        if(!first(whereHelpers).getCode().equals("")){
+            DBHandler dbHandler = new DBHandler(this._context, null, null, 1);
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("server_id", product.getSid());
+            contentValues.put("code", product.getCode());
+            contentValues.put("description", product.getDescription());
+            contentValues.put("photo_int", product.getPhotoInt());
+            contentValues.put("photo_ext", product.getPhotoExt());
+            contentValues.put("title", product.getTitle());
+            contentValues.put("harga", product.getHarga());
+            contentValues.put("kategori", product.getKategori());
 
-        long result = dbHandler.insert(TABLE_NAME, contentValues);
-        dbHandler.close();
-        return result;
+            long result = dbHandler.insert(TABLE_NAME, contentValues);
+            dbHandler.close();
+            return result;
+        }
+        return 0;
     }
     public void update(Product product){
         DBHandler dbHandler = new DBHandler(this._context, null, null, 1);
@@ -123,6 +135,8 @@ public class ProductTransact {
         contentValues.put("photo_int", product.getPhotoInt());
         contentValues.put("photo_ext", product.getPhotoExt());
         contentValues.put("title", product.getTitle());
+        contentValues.put("harga", product.getHarga());
+        contentValues.put("kategori", product.getKategori());
 
         dbHandler.update(TABLE_NAME, contentValues, " id = " + product.getId());
         dbHandler.close();

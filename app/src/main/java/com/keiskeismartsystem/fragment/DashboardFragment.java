@@ -37,6 +37,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.FileHandler;
 
@@ -229,7 +230,8 @@ public class DashboardFragment extends Fragment {
             try {
                 resp = json.getString("RESP");
                 Bundle bundle = new Bundle();
-                _productTransact.truncate();
+                //_productTransact.truncate();
+                final List<Product> products = new ArrayList<Product>();
                 if(resp.equals("SCSPRDCT")){
                     JSONArray city_t = json.getJSONArray("DATA");
                     for (int i = 0; i < city_t.length(); i++){
@@ -241,15 +243,16 @@ public class DashboardFragment extends Fragment {
                             product.setTitle(tmp.getString("title"));
                             product.setDescription(tmp.getString("description"));
                             product.setPhotoExt(tmp.getString("image"));
+                            product.setHarga(tmp.getString("harga"));
+                            product.setKategori(tmp.getString("kategori"));
                         } catch (JSONException e) {
                             e.printStackTrace();
                             continue;
                         }
                         _productTransact.insert(product);
-
+                        products.add(product);
                     }
                     final String url_t = "http://www.smartv2.lapantiga.com/products/detail/";
-                    final List<Product> products = _productTransact.all();
                     Log.v("keiskeidebug", products.get(0).getPhotoExt());
                     Picasso.with(_context).load(_base_url + products.get(0).getPhotoExt())
                             .placeholder(R.drawable.im_picture)
