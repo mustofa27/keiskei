@@ -35,7 +35,7 @@ public class ProductListAdapter extends ArrayAdapter<Product> {
         TextView kategori = (TextView) convertView.findViewById(R.id.kategori_produk);
         kategori.setText(currentProduct.getKategori());
         TextView harga = (TextView) convertView.findViewById(R.id.harga_produk);
-        harga.setText(currentProduct.getHarga());
+        harga.setText("RP " + currentProduct.getHarga() + ",00");
         LinearLayout view = (LinearLayout) convertView.findViewById(R.id.group);
         view.setOnClickListener(new View.OnClickListener() {
             @Override

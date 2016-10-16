@@ -176,7 +176,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "products":
                 ProductList pFragment = new ProductList();
-                getSupportFragmentManager().beginTransaction().replace(R.id.content_container, pFragment ).commit();
+                FragmentManager fragmentManager1 = getSupportFragmentManager();;
+                FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
+                fragmentTransaction1.replace(R.id.content_container, pFragment );
+                fragmentTransaction1.addToBackStack(null);
+                fragmentTransaction1.commit();
                 break;
             case "notification":
                 NotificationFragment nfragment = new NotificationFragment();

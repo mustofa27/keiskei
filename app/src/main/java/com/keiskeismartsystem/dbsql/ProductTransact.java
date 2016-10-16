@@ -107,8 +107,8 @@ public class ProductTransact {
     public long insert(Product product)
     {
         ArrayList<WhereHelper> whereHelpers = new ArrayList<WhereHelper>();
-        whereHelpers.add(new WhereHelper("id", String.valueOf(product.getId())));
-        if(!first(whereHelpers).getCode().equals("")){
+        whereHelpers.add(new WhereHelper("server_id", String.valueOf(product.getSid())));
+        if(first(whereHelpers).getCode().equals("")){
             DBHandler dbHandler = new DBHandler(this._context, null, null, 1);
             ContentValues contentValues = new ContentValues();
             contentValues.put("server_id", product.getSid());

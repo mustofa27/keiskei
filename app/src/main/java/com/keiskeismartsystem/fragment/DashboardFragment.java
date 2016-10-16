@@ -202,7 +202,7 @@ public class DashboardFragment extends Fragment {
         protected String doInBackground(String... args) {
             String resp = "";
             try {
-                String url = _base_url + "m/product/hot";
+                String url = _base_url + "m/product/hot/"+_user.getID();
                 HttpClient request = HttpClient.get(url);
                 if (request.ok())
                 {
