@@ -7,8 +7,15 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.keiskeismartsystem.R;
+import com.keiskeismartsystem.dbsql.ProductTransact;
+import com.keiskeismartsystem.dbsql.WhereHelper;
+import com.keiskeismartsystem.model.Product;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +30,9 @@ public class ProductDetail extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    Product product;
+    ProductTransact productTransact;
+    String _base_url = "http://www.smartv2.lapantiga.com/";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -55,9 +65,11 @@ public class ProductDetail extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+        if (getArguments().containsKey("id")) {
+            productTransact = new ProductTransact(getActivity());
+            ArrayList<WhereHelper> whereHelpers = new ArrayList<WhereHelper>();
+            whereHelpers.add(new WhereHelper("server_id", String.valueOf(getArguments().getInt("id"))));
+            product = productTransact.first(whereHelpers);
         }
     }
 
@@ -65,7 +77,13 @@ public class ProductDetail extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product_detail, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_product_detail, container, false);
+        ImageView imageView = (ImageView) rootView.findViewById(R.id.im_product);
+        Picasso.with(getActivity()).load(_base_url + product.getPhotoExt())
+                .placeholder(R.drawable.im_picture)
+                .error(R.drawable.im_picture)
+                .into(imageView);
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

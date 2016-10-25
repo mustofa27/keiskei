@@ -264,8 +264,11 @@ public class DashboardFragment extends Fragment {
                                         @Override
                                         public void onClick(View v) {
                                             try {
-                                                Intent bi = new Intent(Intent.ACTION_VIEW, Uri.parse(url_t + products.get(0).getCode()));
-                                                startActivity(bi);
+                                                Bundle bundle = new Bundle();
+                                                bundle.putInt("id", products.get(0).getSid());
+                                                ProductDetail productDetail = new ProductDetail();
+                                                productDetail.setArguments(bundle);
+                                                getActivity().getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }
@@ -289,8 +292,11 @@ public class DashboardFragment extends Fragment {
                                         @Override
                                         public void onClick(View v) {
                                             try {
-                                                Intent bi = new Intent(Intent.ACTION_VIEW, Uri.parse(url_t + products.get(1).getCode()));
-                                                startActivity(bi);
+                                                Bundle bundle = new Bundle();
+                                                bundle.putInt("id", products.get(1).getSid());
+                                                ProductDetail productDetail = new ProductDetail();
+                                                productDetail.setArguments(bundle);
+                                                getActivity().getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }
@@ -313,8 +319,11 @@ public class DashboardFragment extends Fragment {
                                         @Override
                                         public void onClick(View v) {
                                             try {
-                                                Intent bi = new Intent(Intent.ACTION_VIEW, Uri.parse(url_t + products.get(2).getCode()));
-                                                startActivity(bi);
+                                                Bundle bundle = new Bundle();
+                                                bundle.putInt("id", products.get(2).getSid());
+                                                ProductDetail productDetail = new ProductDetail();
+                                                productDetail.setArguments(bundle);
+                                                getActivity().getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }
@@ -338,7 +347,7 @@ public class DashboardFragment extends Fragment {
         }
     }
     protected void loadhotproduct(){
-        int count = _productTransact.countAll();
+        /*int count = _productTransact.countAll();
         if(count == 0){
             new LoadHotProduct().execute("photo");
 
@@ -357,6 +366,8 @@ public class DashboardFragment extends Fragment {
                     .error(R.drawable.im_picture)
                     .into(_iv_product_3);
             new LoadHotProduct().execute("photo");
-        }
+        }*/
+        //always load hot produk
+        new LoadHotProduct().execute("photo");
     }
 }
