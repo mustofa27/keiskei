@@ -9,6 +9,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTabHost;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,12 +23,18 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TabWidget;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.keiskeismartsystem.GCM.GCMClientManager;
 import com.keiskeismartsystem.dbsql.CityTransact;
 import com.keiskeismartsystem.dbsql.WhereHelper;
+import com.keiskeismartsystem.fragment.DashboardFragment;
+import com.keiskeismartsystem.fragment.NotificationFragment;
+import com.keiskeismartsystem.fragment.ProductList;
+import com.keiskeismartsystem.fragment.ProfileFragment;
+import com.keiskeismartsystem.fragment.SettingFragment;
 import com.keiskeismartsystem.helper.AppSession;
 import com.keiskeismartsystem.helper.ConnectionDetector;
 import com.keiskeismartsystem.helper.UserSession;
@@ -58,8 +68,9 @@ public class LandingActivity extends AppCompatActivity {
     private static CityTransact _cityTransact;
     private static Context _context;
     private static ConnectionDetector _connection;
-    private static Button _btn_chat,_btn_voicebox;
-
+    int selected = 0;
+    //private static Button _btn_chat,_btn_voicebox;
+    private FragmentTabHost mTabHost;
     GCMClientManager gcmClientManager;
 
     private static ProgressDialog _progress;
@@ -135,7 +146,15 @@ public class LandingActivity extends AppCompatActivity {
         }
 
         refreshGCM();
-        _btn_chat = (Button) findViewById(R.id.btn_chat);
+        ProductList pFragment = new ProductList();
+        FragmentManager fragmentManager1 = getSupportFragmentManager();;
+        FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
+        fragmentTransaction1.replace(R.id.content_container, pFragment );
+        fragmentTransaction1.addToBackStack(null);
+        fragmentTransaction1.commit();
+        findViewById(R.id.product).setSelected(true);
+        selected = R.id.product;
+        /*_btn_chat = (Button) findViewById(R.id.btn_chat);
         _btn_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,9 +169,48 @@ public class LandingActivity extends AppCompatActivity {
                 Intent intent = new Intent(LandingActivity.this, VoiceBoxActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
+    public void changeBigFragment(View view){
+        switch (view.getId()) {
+            case R.id.product:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.product;
+                startActivity(new Intent(LandingActivity.this, LandingActivity.class));
+                break;
+            case R.id.login:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.login;
+                startActivity(new Intent(LandingActivity.this, LoginActivity.class));
+                break;
+            case R.id.register:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.register;
+                startActivity(new Intent(LandingActivity.this, RegisterActivity.class));
+                break;
+            case R.id.chat:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.chat;
+                startActivity(new Intent(LandingActivity.this, ChatActivity.class));
+                break;
+            case R.id.support:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.support;
+                startActivity(new Intent(LandingActivity.this, VoiceBoxActivity.class));
+                break;
+        }
+    }
     public void refreshGCM(){
         gcmClientManager = new GCMClientManager(this, PROJECT_NUMBER);
         gcmClientManager.registerIfNeeded(new GCMClientManager.RegistrationCompletedHandler() {
@@ -197,12 +255,12 @@ public class LandingActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void login(View v){
+    /*public void login(View v){
         startActivity(new Intent(LandingActivity.this, LoginActivity.class));
-    }
-    public void register(View v){
+    }*/
+    /*public void register(View v){
         startActivity(new Intent(LandingActivity.this, RegisterActivity.class));
-    }
+    }*/
     private class SendHttpRequestTask extends AsyncTask<String, Void, String> {
 
         @Override

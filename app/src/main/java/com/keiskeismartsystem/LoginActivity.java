@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
 
     private static EditText _username, _password;
     private static ProgressDialog _progress;
-
+    int selected = 0;
 
     private static UserSession userSession;
     private static ConnectionDetector _conn;
@@ -57,6 +57,8 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
 
         userSession = new UserSession(getApplicationContext());
         _conn = new ConnectionDetector(getApplicationContext());
+        findViewById(R.id.login).setSelected(true);
+        selected = R.id.login;
     }
 
     @Override
@@ -128,6 +130,45 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
             _username.setError("Username Minimal 6 karakter");
         }
         return false;
+    }
+    public void changeBigFragment(View view){
+        switch (view.getId()) {
+            case R.id.product:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.product;
+                startActivity(new Intent(LoginActivity.this, LandingActivity.class));
+                break;
+            case R.id.login:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.login;
+                startActivity(new Intent(LoginActivity.this, LoginActivity.class));
+                break;
+            case R.id.register:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.register;
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                break;
+            case R.id.chat:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.chat;
+                startActivity(new Intent(LoginActivity.this, ChatActivity.class));
+                break;
+            case R.id.support:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.support;
+                startActivity(new Intent(LoginActivity.this, VoiceBoxActivity.class));
+                break;
+        }
     }
     private boolean isValidPassword(String pass) {
         if (pass != null && pass.length() > 5) {
