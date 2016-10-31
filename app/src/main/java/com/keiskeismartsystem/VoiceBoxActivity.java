@@ -64,6 +64,7 @@ public class VoiceBoxActivity extends AppCompatActivity implements AsyncResponse
     private static AppSession _appSession;
     private UserSession _user_session;
     private static TextView _tv_path;
+    int selected = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,8 +158,11 @@ public class VoiceBoxActivity extends AppCompatActivity implements AsyncResponse
             _handphone = user.getTelephone();
             _anonymous = "0";
             _user_id = Integer.toString(user.getID());
+            findViewById(R.id.tab).setVisibility(View.GONE);
             Log.v("keiskei_debug", "login");
         }
+        findViewById(R.id.support).setSelected(true);
+        selected = R.id.support;
     }
     public void submitVoiceBox(View v){
         if(!_conn.isConnectedToInternet()){
@@ -418,5 +422,44 @@ public class VoiceBoxActivity extends AppCompatActivity implements AsyncResponse
             startActivity(intent);
         }
 
+    }
+    public void changeBigFragment(View view){
+        switch (view.getId()) {
+            case R.id.product:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.product;
+                startActivity(new Intent(VoiceBoxActivity.this, LandingActivity.class));
+                break;
+            case R.id.login:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.login;
+                startActivity(new Intent(VoiceBoxActivity.this, LoginActivity.class));
+                break;
+            case R.id.register:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.register;
+                startActivity(new Intent(VoiceBoxActivity.this, RegisterActivity.class));
+                break;
+            case R.id.chat:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.chat;
+                startActivity(new Intent(VoiceBoxActivity.this, ChatActivity.class));
+                break;
+            case R.id.support:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.support;
+                startActivity(new Intent(VoiceBoxActivity.this, VoiceBoxActivity.class));
+                break;
+        }
     }
 }

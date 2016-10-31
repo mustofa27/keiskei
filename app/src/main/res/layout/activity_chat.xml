@@ -1,71 +1,168 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:weightSum="1"
     android:background="#E0E4CB"
     tools:context="com.keiskeismartsystem.ChatActivity">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-    <LinearLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#F9F9F9"
-        android:layout_weight="0.9">
 
-        <ListView
-            android:id="@+id/lv_chats"
+    <LinearLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_icon"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/product"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/support"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/tab"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <LinearLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:listSelector="@android:color/transparent"
-            android:transcriptMode="alwaysScroll"
-            android:divider="@null"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/ll_action"
-        android:gravity="center"
-        android:layout_weight="0.1"
-        android:padding="5dp"
-        android:background="@color/keiskei_chat_action"
-        >
-        <EditText
-            android:id="@+id/et_message"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:padding="5dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/input_rounded"
-            android:imeOptions="actionSend"
-            android:singleLine="true"
-            android:hint=" Message..." />
-        <ImageButton
-            android:layout_width="55dp"
-            android:layout_height="25dp"
-            android:background="@drawable/send"
-            android:layout_weight="1"
-            android:paddingLeft="7dp"
-            android:paddingRight="10dp"
-            android:layout_marginRight="5dp"
-            android:id="@+id/btn_send"
-            />
+            android:layout_weight="0.9"
+            android:background="#F9F9F9"
+            android:orientation="vertical">
 
+            <ListView
+                android:id="@+id/lv_chats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent"
+                android:transcriptMode="alwaysScroll" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:background="@color/keiskei_chat_action"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_rounded"
+                android:hint=" Message..."
+                android:imeOptions="actionSend"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/btn_send"
+                android:layout_width="55dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/send"
+                android:paddingLeft="7dp"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

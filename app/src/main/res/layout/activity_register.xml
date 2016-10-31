@@ -1,136 +1,230 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_green"
-    android:gravity="center_horizontal|top"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="10dp"
     tools:context="com.keiskeismartsystem.RegisterActivity">
 
-    <ImageView
+    <LinearLayout
+        android:id="@+id/tab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:layout_marginBottom="6dp"
-        android:src="@drawable/logo_white_2" />
+        android:layout_height="@dimen/tab_icon"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/product"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/support"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/keiskei_dialog_white_transparant"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/tab"
+        android:gravity="center_horizontal|top"
         android:orientation="vertical"
-        android:padding="20dp"
-        android:paddingBottom="10dp"
-        android:paddingTop="0dp">
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp">
 
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fillViewport="true">
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/logo_white_2" />
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/keiskei_dialog_white_transparant"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="0dp">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fillViewport="true">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/smart_system_green" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/username" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/smart_system_green" />
 
-                <EditText
-                    android:id="@+id/username"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/input_rounded"
-                    android:hint="@string/username"
-                    android:imeOptions="actionNext"
-                    android:maxLines="1"
-                    android:nextFocusForward="@+id/email"
-                    android:padding="10dp"
-                    android:singleLine="true" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/username" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/email" />
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_rounded"
+                        android:hint="@string/username"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/email"
+                        android:padding="10dp"
+                        android:singleLine="true" />
 
-                <EditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/input_rounded"
-                    android:hint="@string/email"
-                    android:imeOptions="actionNext"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:nextFocusForward="@+id/handphone"
-                    android:padding="10dp"
-                    android:singleLine="true" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/email" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/handphone" />
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_rounded"
+                        android:hint="@string/email"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/handphone"
+                        android:padding="10dp"
+                        android:singleLine="true" />
 
-                <EditText
-                    android:id="@+id/handphone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/input_rounded"
-                    android:hint="@string/handphone"
-                    android:imeOptions="actionNext"
-                    android:inputType="number"
-                    android:maxLines="1"
-                    android:nextFocusForward="@+id/city"
-                    android:padding="10dp"
-                    android:singleLine="true" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handphone" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/city" />
+                    <EditText
+                        android:id="@+id/handphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_rounded"
+                        android:hint="@string/handphone"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/city"
+                        android:padding="10dp"
+                        android:singleLine="true" />
 
-                <Spinner
-                    android:id="@+id/city"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/input_rounded"></Spinner>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/city" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/button_rounded"
-                    android:onClick="register"
-                    android:text="@string/register"
-                    android:textColor="@color/white" />
-            </LinearLayout>
+                    <Spinner
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/input_rounded"></Spinner>
 
-        </ScrollView>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/button_rounded"
+                        android:onClick="register"
+                        android:text="@string/register"
+                        android:textColor="@color/white" />
+                </LinearLayout>
 
+            </ScrollView>
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

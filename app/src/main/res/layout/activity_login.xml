@@ -4,7 +4,93 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_green"
     tools:context="com.keiskeismartsystem.LoginActivity">
+    <LinearLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_icon"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
+        <LinearLayout
+            android:id="@+id/product"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/support"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/landing_bg_menu"
+            android:gravity="center"
+            android:onClick="changeBigFragment"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
+                android:src="@drawable/home" />
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
@@ -14,7 +100,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        >
+        android:layout_above="@id/tab">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,92 +157,6 @@
                 android:onClick="login"
                 android:text="@string/login"
                 android:textColor="@color/white" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/product"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
-            android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/home" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/login"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
-            android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/home" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/register"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
-            android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/home" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/chat"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
-            android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/home" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/support"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
-            android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/home" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

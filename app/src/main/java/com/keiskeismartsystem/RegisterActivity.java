@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity implements AsyncResponse
     private static Spinner _city;
 
     private static AppSession _appSession;
-
+    int selected = 0;
     private static EditText _email, _username, _handphone;
     String city_id;
     private static CityTransact _ct;
@@ -136,7 +136,8 @@ public class RegisterActivity extends AppCompatActivity implements AsyncResponse
 
             }
         });
-
+        findViewById(R.id.register).setSelected(true);
+        selected = R.id.register;
     }
     private class SendHttpRequestTask extends AsyncTask<String, Void, String> {
 
@@ -383,5 +384,44 @@ public class RegisterActivity extends AppCompatActivity implements AsyncResponse
             json = "";
         }
         return json;
+    }
+    public void changeBigFragment(View view){
+        switch (view.getId()) {
+            case R.id.product:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.product;
+                startActivity(new Intent(RegisterActivity.this, LandingActivity.class));
+                break;
+            case R.id.login:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.login;
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                break;
+            case R.id.register:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.register;
+                startActivity(new Intent(RegisterActivity.this, RegisterActivity.class));
+                break;
+            case R.id.chat:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.chat;
+                startActivity(new Intent(RegisterActivity.this, ChatActivity.class));
+                break;
+            case R.id.support:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.support;
+                startActivity(new Intent(RegisterActivity.this, VoiceBoxActivity.class));
+                break;
+        }
     }
 }

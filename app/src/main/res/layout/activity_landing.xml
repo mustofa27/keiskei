@@ -12,7 +12,7 @@
         />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/tab_icon"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
         <LinearLayout
@@ -25,8 +25,8 @@
             android:onClick="changeBigFragment"
             android:gravity="center">
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
                 android:src="@drawable/home"/>
         </LinearLayout>
         <LinearLayout
@@ -39,8 +39,8 @@
             android:onClick="changeBigFragment"
             android:gravity="center">
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
                 android:src="@drawable/home"/>
         </LinearLayout>
         <LinearLayout
@@ -53,8 +53,8 @@
             android:onClick="changeBigFragment"
             android:gravity="center">
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
                 android:src="@drawable/home"/>
         </LinearLayout>
         <LinearLayout
@@ -67,8 +67,8 @@
             android:onClick="changeBigFragment"
             android:gravity="center">
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
                 android:src="@drawable/home"/>
         </LinearLayout>
         <LinearLayout
@@ -81,8 +81,8 @@
             android:onClick="changeBigFragment"
             android:gravity="center">
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/tab_icon"
+                android:layout_height="@dimen/tab_icon"
                 android:src="@drawable/home"/>
         </LinearLayout>
     </LinearLayout>

@@ -39,19 +39,22 @@
             android:configChanges="orientation"
             android:label="@string/title_activity_register"
             android:windowSoftInputMode="stateVisible|adjustResize"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme">
         </activity>
         <activity
             android:name=".LoginActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_login"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme">
         </activity>
         <activity
             android:name=".LandingActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_landing"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme">
         </activity>
         <activity
             android:name=".MainanActivity"
@@ -88,7 +91,8 @@
             android:configChanges="orientation"
             android:label="@string/title_activity_voice_box"
             android:parentActivityName=".LandingActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.keiskeismartsystem.LandingActivity" />
@@ -98,7 +102,8 @@
             android:configChanges="orientation"
             android:label="@string/title_activity_chat"
             android:parentActivityName=".LandingActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.keiskeismartsystem.LandingActivity" />

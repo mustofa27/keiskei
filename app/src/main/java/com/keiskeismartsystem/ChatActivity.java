@@ -86,7 +86,7 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
     private ChatAdapter cadapter;
     GCMReceiverChat gcmReceiverChat = null;
     Boolean flagR = false;
-
+    int selected = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -217,7 +217,10 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
             _name = user.getName();
             _email = user.getEmail();
             _handphone = user.getTelephone();
+            findViewById(R.id.tab).setVisibility(View.GONE);
         }
+        findViewById(R.id.chat).setSelected(true);
+        selected = R.id.chat;
     }
     private void sendImage(){
         Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -825,5 +828,44 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
             startActivity(intent);
         }
 
+    }
+    public void changeBigFragment(View view){
+        switch (view.getId()) {
+            case R.id.product:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.product;
+                startActivity(new Intent(ChatActivity.this, LandingActivity.class));
+                break;
+            case R.id.login:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.login;
+                startActivity(new Intent(ChatActivity.this, LoginActivity.class));
+                break;
+            case R.id.register:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.register;
+                startActivity(new Intent(ChatActivity.this, RegisterActivity.class));
+                break;
+            case R.id.chat:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.chat;
+                startActivity(new Intent(ChatActivity.this, ChatActivity.class));
+                break;
+            case R.id.support:
+                if(selected!=0)
+                    findViewById(selected).setSelected(false);
+                view.setSelected(true);
+                selected = R.id.support;
+                startActivity(new Intent(ChatActivity.this, VoiceBoxActivity.class));
+                break;
+        }
     }
 }
