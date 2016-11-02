@@ -10,9 +10,14 @@ import android.os.Build;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,7 +46,7 @@ import com.keiskeismartsystem.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private FragmentTabHost mTabHost;
     private static Context _context;
     private static UserSession _userSession;
@@ -51,13 +56,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         _context = getApplicationContext();
         _notifTransact = new NotifTransact(_context);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
         _userSession = new UserSession(getApplicationContext());
         gcmReceiverChat = new GCMReceiverChat();
-
         if(!_userSession.isUserLoggedIn()) {
             Toast toast = Toast.makeText(getApplicationContext(),"Anda harus login terlebih dahulu.", Toast.LENGTH_SHORT);
             toast.show();
@@ -69,13 +84,13 @@ public class MainActivity extends AppCompatActivity {
         mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.content_container);
         Bundle b = new Bundle();
-        b.putString("key", "Dashboard");
+        /*b.putString("key", "Dashboard");
         mTabHost.addTab(mTabHost.newTabSpec("dashboard").setIndicator(null, ContextCompat.getDrawable(this, R.drawable.home)),
                 DashboardFragment.class, b);
-        b = new Bundle();
+        b = new Bundle();*/
         b.putString("key", "Products");
         mTabHost.addTab(mTabHost.newTabSpec("products")
-                .setIndicator(null, ContextCompat.getDrawable(this, R.drawable.notif)), ProductList.class, b);
+                .setIndicator(null, ContextCompat.getDrawable(this, R.drawable.home)), ProductList.class, b);
         b = new Bundle();
         b.putString("key", "Notification");
         mTabHost.addTab(mTabHost.newTabSpec("notification")
@@ -111,16 +126,16 @@ public class MainActivity extends AppCompatActivity {
                     Log.v("keiskeidebug", "idinya " + a);
                     String tabId = "dashboard";
                     switch (a){
-                        case 1:
+                        case 0:
                             tabId = "products";
                             break;
-                        case 2:
+                        case 1:
                             tabId = "notification";
                             break;
-                        case 3:
+                        case 2:
                             tabId = "profile";
                             break;
-                        case 4:
+                        case 3:
                             tabId = "setting";
                             break;
                     }
@@ -171,16 +186,12 @@ public class MainActivity extends AppCompatActivity {
     public void changeBigFragment(String type){
         switch (type) {
             case "dashboard":
-                DashboardFragment fragment = new DashboardFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.content_container, fragment ).commit();
+                DashboardFragment dfragment = new DashboardFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.content_container, dfragment ).commit();
                 break;
             case "products":
-                ProductList pFragment = new ProductList();
-                FragmentManager fragmentManager1 = getSupportFragmentManager();;
-                FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
-                fragmentTransaction1.replace(R.id.content_container, pFragment );
-                fragmentTransaction1.addToBackStack(null);
-                fragmentTransaction1.commit();
+                ProductList fragment = new ProductList();
+                getSupportFragmentManager().beginTransaction().replace(R.id.content_container, fragment ).commit();
                 break;
             case "notification":
                 NotificationFragment nfragment = new NotificationFragment();
@@ -324,6 +335,34 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_dashboard) {
+            changeBigFragment("dashboard");
+        } else if (id == R.id.nav_notif) {
+            changeBigFragment("notification");
+        } else if (id == R.id.nav_kontak) {
+            startActivity(new Intent(this, VoiceBoxActivity.class));
+            finish();
+        } else if (id == R.id.nav_chat) {
+            startActivity(new Intent(this,ChatActivity.class));
+            finish();
+        } else if (id == R.id.nav_produk) {
+            changeBigFragment("products");
+        } else if (id == R.id.nav_signout) {
+            _userSession.logout();
+            startActivity(new Intent(this, LandingActivity.class));
+            finish();
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
     public class GCMReceiverChat extends BroadcastReceiver {
         public GCMReceiverChat() {
         }

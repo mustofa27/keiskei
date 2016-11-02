@@ -823,9 +823,11 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
         if(_user_session.isUserLoggedIn()){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
+            finish();
         }else{
             Intent intent = new Intent(this, LandingActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }

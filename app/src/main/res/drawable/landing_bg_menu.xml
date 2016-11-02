@@ -3,12 +3,12 @@
     <item
         android:state_selected="true">
         <shape>
-            <solid android:color="@android:color/darker_gray" />
+            <solid android:color="@color/keiskei_green_date" />
         </shape>
     </item>
     <item>
         <shape>
-            <solid android:color="@android:color/black" />
+            <solid android:color="@color/keiskei_greennav" />
         </shape>
     </item>
 </selector>
