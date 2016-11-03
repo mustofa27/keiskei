@@ -14,7 +14,10 @@ import com.keiskeismartsystem.adapter.ProductListAdapter;
 import com.keiskeismartsystem.dbsql.ProductTransact;
 import com.keiskeismartsystem.model.Product;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import cz.msebera.android.httpclient.extras.PRNGFixes;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -106,7 +109,20 @@ public class ProductList extends Fragment {
     }
     private void populateList()
     {
-        adapter = new ProductListAdapter(getActivity(),products);
+        List<List<Product>> productListList = new ArrayList<List<Product>>();
+        List<Product> productList = new ArrayList<Product>();
+        for(int i = 0;i< products.size();i++){
+            productList.add(products.get(i));
+            if(i%2==0){
+                if(i+1 == products.size())
+                    productListList.add(productList);
+            }
+            else {
+                productListList.add(productList);
+                productList = new ArrayList<Product>();
+            }
+        }
+        adapter = new ProductListAdapter(getActivity(),productListList);
         listView.setAdapter(adapter);
     }
     // TODO: Rename method, update argument and hook method into UI event

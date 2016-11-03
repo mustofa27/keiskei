@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="8dp"
-        android:background="@drawable/bg_green_half">
+        android:background="@android:color/white">
 
         <ListView
             android:id="@+id/product_list"

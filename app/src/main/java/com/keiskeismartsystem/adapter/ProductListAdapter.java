@@ -21,11 +21,11 @@ import java.util.List;
 /**
  * Created by mustofa on 10/13/2016.
  */
-public class ProductListAdapter extends ArrayAdapter<Product> {
+public class ProductListAdapter extends ArrayAdapter<List<Product>> {
     Activity activity;
-    List<Product> products;
+    List<List<Product>> products;
     String _base_url = "http://www.smartv2.lapantiga.com/";
-    public ProductListAdapter(Activity activity, List<Product> productList){
+    public ProductListAdapter(Activity activity, List<List<Product>> productList){
         super(activity,R.layout.list_product,productList);
         this.activity = activity;
         products = productList;
@@ -35,27 +35,38 @@ public class ProductListAdapter extends ArrayAdapter<Product> {
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView == null)
             convertView = activity.getLayoutInflater().inflate(R.layout.list_product, parent, false);
-        final Product currentProduct = products.get(position);
+        final List<Product> currentProduct = products.get(position);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.gambar_produk);
-        Picasso.with(activity).load(_base_url + currentProduct.getPhotoExt())
+        Picasso.with(activity).load(_base_url + currentProduct.get(0).getPhotoExt())
                 .placeholder(R.drawable.im_picture)
                 .error(R.drawable.im_picture)
                 .into(imageView);
-        TextView nama = (TextView) convertView.findViewById(R.id.nama_produk);
-        nama.setText(currentProduct.getTitle());
-        TextView kategori = (TextView) convertView.findViewById(R.id.kategori_produk);
-        kategori.setText(currentProduct.getKategori());
-        TextView harga = (TextView) convertView.findViewById(R.id.harga_produk);
-        harga.setText("RP " + currentProduct.getHarga() + ",00");
-        LinearLayout view = (LinearLayout) convertView.findViewById(R.id.group);
-        view.setOnClickListener(new View.OnClickListener() {
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /*Intent intent = new Intent(activity,DetailOutlet.class);
                 intent.putExtra("kd_outlet", currentOutlet.getKode());
                 startActivity(intent);*/
                 Bundle bundle = new Bundle();
-                bundle.putInt("id", currentProduct.getSid());
+                bundle.putInt("id", currentProduct.get(0).getSid());
+                ProductDetail productDetail = new ProductDetail();
+                productDetail.setArguments(bundle);
+                activity.getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+            }
+        });
+        imageView = (ImageView) convertView.findViewById(R.id.gambar_produk1);
+        Picasso.with(activity).load(_base_url + currentProduct.get(1).getPhotoExt())
+                .placeholder(R.drawable.im_picture)
+                .error(R.drawable.im_picture)
+                .into(imageView);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent intent = new Intent(activity,DetailOutlet.class);
+                intent.putExtra("kd_outlet", currentOutlet.getKode());
+                startActivity(intent);*/
+                Bundle bundle = new Bundle();
+                bundle.putInt("id", currentProduct.get(1).getSid());
                 ProductDetail productDetail = new ProductDetail();
                 productDetail.setArguments(bundle);
                 activity.getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
