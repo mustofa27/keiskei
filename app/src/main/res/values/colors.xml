@@ -23,6 +23,5 @@
     <item name="keiskei_landing_bg" type="color">#A2A2A2</item>
     <item name="keiskei_dark_grey" type="color">#8c8c8c</item>
     <item name="keiskei_green_date" type="color">#346F1D</item>
-
-
+    <item name="button_green" type="color">#0D5D52</item>
 </resources>

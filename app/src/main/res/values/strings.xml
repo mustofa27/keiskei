@@ -50,5 +50,6 @@
     <string name="facebook_app_id">727802654022279</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="logout">Sign Out</string>
 </resources>
 

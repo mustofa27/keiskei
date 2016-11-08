@@ -21,6 +21,9 @@
     </style>
     <style name="noAnimTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowAnimationStyle">@null</item>
+        <item name="colorPrimary">#0D3323</item>
+        <item name="colorPrimaryDark">#0D3323</item>
+        <item name="colorAccent">#DBDBDB</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

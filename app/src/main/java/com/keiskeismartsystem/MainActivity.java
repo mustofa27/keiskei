@@ -98,12 +98,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .setIndicator(null, ContextCompat.getDrawable(this, R.drawable.notif)), NotificationFragment.class, b);
         b = new Bundle();
         b.putString("key", "Profile");
-        mTabHost.addTab(mTabHost.newTabSpec("profile").setIndicator(null, ContextCompat.getDrawable(this, R.drawable.profil)),
-                ProfileFragment.class, b);
+        mTabHost.addTab(mTabHost.newTabSpec("profile")
+                .setIndicator(null, ContextCompat.getDrawable(this, R.drawable.profil)), ProfileFragment.class, b);
         b = new Bundle();
         b.putString("key", "Setting");
-        mTabHost.addTab(mTabHost.newTabSpec("setting").setIndicator(null, ContextCompat.getDrawable(this, R.drawable.opsi)),
-                SettingFragment.class, b);
+        mTabHost.addTab(mTabHost.newTabSpec("setting")
+                .setIndicator(null, ContextCompat.getDrawable(this, R.drawable.opsi)), SettingFragment.class, b);
 
         mTabHost.getTabWidget().setStripEnabled(false);
         Bundle notif_bundle = getIntent().getExtras();
@@ -196,11 +196,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case "notification":
                 NotificationFragment nfragment = new NotificationFragment();
-                FragmentManager fragmentManager = getSupportFragmentManager();;
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_container, nfragment );
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.content_container, nfragment ).commit();
                 break;
             case "profile":
                 ProfileFragment pfragment = new ProfileFragment();
@@ -353,10 +349,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             finish();
         } else if (id == R.id.nav_produk) {
             changeBigFragment("products");
-        } else if (id == R.id.nav_signout) {
-            _userSession.logout();
-            startActivity(new Intent(this, LandingActivity.class));
-            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -381,5 +373,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     break;
             }
         }
+    }
+    public void logout(View view){
+        _userSession.logout();
+        startActivity(new Intent(this, SplashScreen.class));
+        finish();
     }
 }
