@@ -26,6 +26,7 @@ public class ProductTransact {
             do{
                 Product product = new Product();
                 product.setId(Integer.parseInt(cursor.getString((cursor.getColumnIndex("id")))));
+                product.setSid(Integer.parseInt(cursor.getString((cursor.getColumnIndex("server_id")))));
                 product.setCode(cursor.getString((cursor.getColumnIndex("code"))));
                 product.setTitle(cursor.getString((cursor.getColumnIndex("title"))));
                 product.setDescription(cursor.getString((cursor.getColumnIndex("description"))));
@@ -58,6 +59,7 @@ public class ProductTransact {
             do{
                 Product product = new Product();
                 product.setId(Integer.parseInt(cursor.getString((cursor.getColumnIndex("id")))));
+                product.setSid(Integer.parseInt(cursor.getString((cursor.getColumnIndex("server_id")))));
                 product.setCode(cursor.getString((cursor.getColumnIndex("code"))));
                 product.setTitle(cursor.getString((cursor.getColumnIndex("title"))));
                 product.setDescription(cursor.getString((cursor.getColumnIndex("description"))));
@@ -87,9 +89,8 @@ public class ProductTransact {
         }
         DBHandler dbHandler = new DBHandler(this._context, null, null, 1);
         Cursor cursor = dbHandler.get(TABLE_NAME, where, "");
-        Product product = new Product();
         if (cursor.moveToFirst()) {
-
+            Product product = new Product();
             product.setId(Integer.parseInt(cursor.getString((cursor.getColumnIndex("id")))));
             product.setSid(Integer.parseInt(cursor.getString((cursor.getColumnIndex("server_id")))));
             product.setCode(cursor.getString((cursor.getColumnIndex("code"))));
@@ -99,16 +100,19 @@ public class ProductTransact {
             product.setPhotoExt(cursor.getString((cursor.getColumnIndex("photo_ext"))));
             product.setHarga(cursor.getString((cursor.getColumnIndex("harga"))));
             product.setKategori(cursor.getString((cursor.getColumnIndex("kategori"))));
+            dbHandler.close();
+            return product;
         }
         dbHandler.close();
-        return product;
+        return null;
 
     }
     public long insert(Product product)
     {
         ArrayList<WhereHelper> whereHelpers = new ArrayList<WhereHelper>();
         whereHelpers.add(new WhereHelper("server_id", String.valueOf(product.getSid())));
-        if(first(whereHelpers).getCode().equals("")){
+        Product existing = first(whereHelpers);
+        if( existing == null){
             DBHandler dbHandler = new DBHandler(this._context, null, null, 1);
             ContentValues contentValues = new ContentValues();
             contentValues.put("server_id", product.getSid());

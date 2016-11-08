@@ -12,35 +12,88 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="@dimen/activity_horizontal_margin">
             <ImageView
                 android:id="@+id/im_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/logo_white"
-                android:layout_gravity="center"/>
+                android:src="@drawable/logo_splash"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
             <TextView
+                android:id="@+id/nm_produk"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/hello_blank_fragment"
+                android:text="Nama Produk"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"/>
+                android:textSize="22sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kategori : "
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/nm_kategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Kategori"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga : "
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:id="@+id/nom_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nominal Harga"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kode Produk : "
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/nm_kode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Kode"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"/>
+            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/hello_blank_fragment"
+                android:text="Dekripsi"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"/>
+                android:textSize="22sp"/>
             <TextView
+                android:id="@+id/desc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/hello_blank_fragment"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/hello_blank_fragment"
+                android:text="Deskripsi"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"/>
         </LinearLayout>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.keiskeismartsystem.R;
 import com.keiskeismartsystem.dbsql.ProductTransact;
@@ -32,6 +33,7 @@ public class ProductDetail extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     Product product;
     ProductTransact productTransact;
+    TextView nm_produk,nm_kategori,nom_harga,nm_kode,desc;
     String _base_url = "http://www.smartv2.lapantiga.com/";
 
     // TODO: Rename and change types of parameters
@@ -78,11 +80,23 @@ public class ProductDetail extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_product_detail, container, false);
-        ImageView imageView = (ImageView) rootView.findViewById(R.id.im_product);
-        Picasso.with(getActivity()).load(_base_url + product.getPhotoExt())
-                .placeholder(R.drawable.im_picture)
-                .error(R.drawable.im_picture)
-                .into(imageView);
+        if(product!=null) {
+            ImageView imageView = (ImageView) rootView.findViewById(R.id.im_product);
+            Picasso.with(getActivity()).load(_base_url + product.getPhotoExt())
+                    .placeholder(R.drawable.im_picture)
+                    .error(R.drawable.im_picture)
+                    .into(imageView);
+            nm_produk = (TextView) rootView.findViewById(R.id.nm_produk);
+            nm_produk.setText(product.getTitle().toString());
+            nm_kategori = (TextView) rootView.findViewById(R.id.nm_kategori);
+            nm_kategori.setText(product.getKategori());
+            nm_kode = (TextView) rootView.findViewById(R.id.nm_kode);
+            nm_kode.setText(product.getCode());
+            nom_harga = (TextView) rootView.findViewById(R.id.nom_harga);
+            nom_harga.setText("RP " + product.getHarga() + ",00");
+            desc = (TextView) rootView.findViewById(R.id.desc);
+            desc.setText(product.getDescription());
+        }
         return rootView;
     }
 
