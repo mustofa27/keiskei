@@ -1,22 +1,39 @@
 package com.keiskeismartsystem.fragment;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.keiskeismartsystem.R;
 import com.keiskeismartsystem.dbsql.ProductTransact;
 import com.keiskeismartsystem.dbsql.WhereHelper;
+import com.keiskeismartsystem.helper.ConnectionDetector;
+import com.keiskeismartsystem.helper.UserSession;
 import com.keiskeismartsystem.model.Product;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
 import java.util.ArrayList;
+
+import cz.msebera.android.httpclient.Header;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,11 +48,14 @@ public class ProductDetail extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static ConnectionDetector _conn;
     Product product;
     ProductTransact productTransact;
-    TextView nm_produk,nm_kategori,nom_harga,nm_kode,desc;
+    TextView nm_produk, nm_kategori, nom_harga, nm_kode, desc;
     String _base_url = "http://www.smartv2.lapantiga.com/";
-
+    Button button;
+    private static ProgressDialog _progress;
+    private UserSession _user_session;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -72,6 +92,8 @@ public class ProductDetail extends Fragment {
             ArrayList<WhereHelper> whereHelpers = new ArrayList<WhereHelper>();
             whereHelpers.add(new WhereHelper("server_id", String.valueOf(getArguments().getInt("id"))));
             product = productTransact.first(whereHelpers);
+            _user_session = new UserSession(getActivity());
+            _conn = new ConnectionDetector(getActivity());
         }
     }
 
@@ -80,7 +102,7 @@ public class ProductDetail extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_product_detail, container, false);
-        if(product!=null) {
+        if (product != null) {
             ImageView imageView = (ImageView) rootView.findViewById(R.id.im_product);
             Picasso.with(getActivity()).load(_base_url + product.getPhotoExt())
                     .placeholder(R.drawable.im_picture)
@@ -96,10 +118,72 @@ public class ProductDetail extends Fragment {
             nom_harga.setText("RP " + product.getHarga() + ",00");
             desc = (TextView) rootView.findViewById(R.id.desc);
             desc.setText(product.getDescription());
+            button = (Button) rootView.findViewById(R.id.cart);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(!_conn.isConnectedToInternet()){
+                        Toast toast = Toast.makeText(getActivity(),"Tidak ada koneksi internet.", Toast.LENGTH_SHORT);
+                        toast.show();
+                        return;
+                    }
+                    _progress = new ProgressDialog(view.getContext());
+                    _progress.setCancelable(true);
+                    _progress.setMessage("Submit..");
+                    _progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    _progress.setProgress(0);
+                    _progress.setMax(100);
+                    _progress.show();
+                    RequestParams data = new RequestParams();
+                    data.put("id", _user_session.getUserSessionData().getID());
+                    data.put("id_product", product.getId());
+                    AsyncHttpClient client = new AsyncHttpClient();
+                    client.post("http://smartv2.lapantiga.com/m/cart/set", data, new JsonHttpResponseHandler() {
+                        @Override
+                        public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                            String resp = "";
+                            try {
+                                resp = response.getString("RESP");
+                                if (resp.equals("SCSCRT")) {
+                                    String data;
+                                    data = response.getString("MESSAGE");
+                                    _progress.dismiss();
+                                    Toast toast = Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT);
+                                    toast.show();
+                                } else if (resp.equals("FLDCRT")) {
+                                    String data;
+                                    data = response.getString("MESSAGE");
+                                    _progress.dismiss();
+                                    Toast toast = Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT);
+                                    toast.show();
+                                } else {
+                                    _progress.dismiss();
+                                    Toast toast = Toast.makeText(getActivity(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
+                                    toast.show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            super.onSuccess(statusCode, headers, response);
+                        }
+
+                        @Override
+                        public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
+                            _progress.dismiss();
+                            Toast toast = Toast.makeText(getActivity(), "Terjadi kesalahan server.", Toast.LENGTH_SHORT);
+                            toast.show();
+                        }
+                    });
+
+
+                }
+            });
+            if (!_user_session.isUserLoggedIn()) {
+                button.setVisibility(View.GONE);
+            }
         }
         return rootView;
     }
-
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
