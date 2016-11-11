@@ -2,6 +2,7 @@ package com.keiskeismartsystem.adapter;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -22,10 +23,10 @@ import java.util.List;
  * Created by mustofa on 10/13/2016.
  */
 public class ProductListAdapter extends ArrayAdapter<List<Product>> {
-    Activity activity;
+    FragmentActivity activity;
     List<List<Product>> products;
     String _base_url = "http://www.smartv2.lapantiga.com/";
-    public ProductListAdapter(Activity activity, List<List<Product>> productList){
+    public ProductListAdapter(FragmentActivity activity, List<List<Product>> productList){
         super(activity,R.layout.list_product,productList);
         this.activity = activity;
         products = productList;
@@ -51,7 +52,7 @@ public class ProductListAdapter extends ArrayAdapter<List<Product>> {
                 bundle.putInt("id", currentProduct.get(0).getSid());
                 ProductDetail productDetail = new ProductDetail();
                 productDetail.setArguments(bundle);
-                activity.getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
             }
         });
         imageView = (ImageView) convertView.findViewById(R.id.gambar_produk1);
@@ -69,7 +70,7 @@ public class ProductListAdapter extends ArrayAdapter<List<Product>> {
                 bundle.putInt("id", currentProduct.get(1).getSid());
                 ProductDetail productDetail = new ProductDetail();
                 productDetail.setArguments(bundle);
-                activity.getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
             }
         });
         return convertView;

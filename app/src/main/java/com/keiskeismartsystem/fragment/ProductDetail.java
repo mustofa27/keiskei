@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -136,7 +136,7 @@ public class ProductDetail extends Fragment {
                     _progress.show();
                     RequestParams data = new RequestParams();
                     data.put("id", _user_session.getUserSessionData().getID());
-                    data.put("id_product", product.getId());
+                    data.put("id_product", product.getSid());
                     AsyncHttpClient client = new AsyncHttpClient();
                     client.post("http://smartv2.lapantiga.com/m/cart/set", data, new JsonHttpResponseHandler() {
                         @Override

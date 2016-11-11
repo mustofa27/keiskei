@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.keiskeismartsystem.dbsql.ProductTransact;
 import com.keiskeismartsystem.fragment.ProductDetail;
+import com.keiskeismartsystem.helper.UserSession;
 import com.keiskeismartsystem.library.HttpClient;
 import com.keiskeismartsystem.model.Product;
 import com.squareup.picasso.Picasso;
@@ -24,6 +25,7 @@ import java.util.List;
 public class SplashScreen extends Activity {
     public static final String _base_url = "http://www.smartv2.lapantiga.com/";
     private static ProductTransact _productTransact;
+    private static UserSession userSession;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,7 @@ public class SplashScreen extends Activity {
             }
         };
         timerThread.start();*/
+        userSession = new UserSession(getApplicationContext());
         new LoadHotProduct().execute();
     }
 
@@ -54,7 +57,13 @@ public class SplashScreen extends Activity {
         protected String doInBackground(String... args) {
             String resp = "";
             try {
-                String url = _base_url + "m/product/get";
+                String url = "";
+                if(!userSession.isUserLoggedIn())
+                    url = _base_url + "m/product/get/0";
+                else {
+                    _productTransact.truncate();
+                    url = _base_url + "m/product/get/" + userSession.getUserSessionData().getID();
+                }
                 HttpClient request = HttpClient.get(url);
                 if (request.ok())
                 {
@@ -112,9 +121,16 @@ public class SplashScreen extends Activity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            Intent intent = new Intent(SplashScreen.this,LandingActivity.class);
-            startActivity(intent);
-            finish();
+            if(userSession.isUserLoggedIn()){
+                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+            else {
+                Intent intent = new Intent(SplashScreen.this, LandingActivity.class);
+                startActivity(intent);
+                finish();
+            }
         }
     }
     @Override

@@ -6,7 +6,7 @@
     tools:context="com.keiskeismartsystem.LandingActivity">
 
     <LinearLayout
-        android:id="@id/tab"
+        android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tab_icon"
         android:orientation="horizontal"
@@ -37,7 +37,8 @@
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home"/>
+                android:src="@drawable/login"
+                android:padding="3dp"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/register"
@@ -48,10 +49,12 @@
             android:orientation="horizontal"
             android:onClick="changeBigFragment"
             android:gravity="center">
+
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home"/>
+                android:src="@drawable/register"
+                android:padding="3dp"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/chat"
@@ -65,7 +68,7 @@
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home"/>
+                android:src="@drawable/notif"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/support"
@@ -79,7 +82,8 @@
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home"/>
+                android:src="@drawable/contact_us"
+                android:padding="3dp"/>
         </LinearLayout>
     </LinearLayout>
     <FrameLayout

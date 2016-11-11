@@ -2,319 +2,598 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appstate-7.5.0_1680278290ea98c1987f9d070028f79bb55aedb7\classes.dex" />
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-9.8.0_909424645c18aa66c2b9aeda0493627396876b1c.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-7.5.0_90370b67d3f2d6b5f09c0930344fd5094066771c\classes.dex" />
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-9.8.0_9333fb3e778540950148f3cbda17e04e9856a7cd.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-7.5.0_9ebe48b0de75b89681a4d47a7c9bede41e96181b\classes.dex" />
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-9.8.0_f37cf0734a176f02708dcf24d03fcbb68bb5fabd.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="a78183f30e769a98ab4820794f597763088d3065">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-7.5.0_c9f182e5359a9007a5c9c264d15897fc4e51ab78\classes.dex" />
+        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-base-9.8.0_eaa83a4699ae38eeb14e8bfa281d5ec48d457017.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.1_cb97c54a7c35238c27b7b5de40710344f719147b\classes.dex" />
+        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-9.8.0_60ab478ff358f60f5a44987ee9a8c2632974acc4.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\libs\internal_impl-22.0.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.0.0_467d8a4e07ed6c88a0a6c74eb9f5179702f5a442\classes.dex" />
+        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-clearcut-9.8.0_ec04086ca18ef30319da8b644423eef874810ed3.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="1821601ddbec5ff125653097812823388700af74">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_37b0e3b1524fa6f0f8876122313603ec25034327\classes.dex" />
+        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-9.8.0_deff131f1e1253f207fa2eacf0c99df99d1b3f38.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-7.5.0_630afda2c3f47e569d869db971dce520257b2498\classes.dex" />
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.8.0_59ca811ed2fff329c507ff5fe158d400eacc11d7.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-7.5.0_13d1f41fa021e58690ec6e3ed1026203e7dbebaf\classes.dex" />
+        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-common-9.8.0_a522f0400c0fece030354b854c5b2ab379e9648d.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-7.5.0_5365cd985d17f60f1b3083ec420595305460c35a\classes.dex" />
+        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-9.8.0_6818047429fe870a49d6ae2857eb9f07cb3e8e7d.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-7.5.0_fcc4db9dc0ba728a1d47b5f8f64e7b5ef901da69\classes.dex" />
+        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-instantapps-9.8.0_3eb428542420f436b951b4b629379bce6f920b65.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-android-1.2.0_0287f6bf6acabcdb8d8125f465a8840c0be72527\classes.dex" />
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.android.support-palette-v7-24.0.0_83725d927a59eba4f1e2583688b10b24b3ad5fd8.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-7.5.0_8991044b95c62e0c6f1f92824de62316e30cf5cf\classes.dex" />
+        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-9.8.0_2501e5df689754c19061b24f1111b742410e04dc.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.2.1_34833918071b41dc80a46ea365d646c6d122a66d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.8.0_6a276af85ceb8a9f6061859d4ef30d1d2e515c09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_b5feae10001afec2e04a8ab35059c5849dd0b637.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-9.8.0_1bd1f517bf4adf7a8aae0ff4b6afa1399f9776c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-config-9.8.0_5f7e1e15ee5377bfd4546993ee876e7110c74aae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-api-9.8.0_559616617962ba90393096deabde31fc030be68c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-9.8.0_cecbf9fec8078f640b4875e8257e33c4a7a4bac6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-common-9.8.0_a1f9906914054009cbca0cbf41c08b6472ea2fde.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-9.8.0_e5f22755f99e565aaa5c72fd3e5d7c8260fac6e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\LENOVO\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.9\386a4339ffe52d5d63e80f9bed8d2b1d1a418249\android-async-http-1.4.9.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
         sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\android-async-http-1.4.9_0c93e17959aa255b8faaf6a64f3c958d71e1612d\classes.dex" />
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.9_0c93e17959aa255b8faaf6a64f3c958d71e1612d.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="398afd128a36ad3e1ac7b0b74fefc8b1b677adc4">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c39d08be3c2b1f6f654d788db837792bdef09687\classes.dex" />
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0_c59ec995474ef52afc45028925b7bd4337953d7f.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="dc1760f19177e8f04a2384be37290f3998277bda">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_00dec463f8c26b35e8bd85cd088519b27b23ac76\classes.dex" />
+        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-9.8.0_3a34f59867b3a4e6551442f7063fb6df9d9923da.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-7.5.0_a9a6c85f0c47b5430122bd97849c057db3ffc8dc\classes.dex" />
+        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-places-9.8.0_723d32b6c2381c496a1cf2325c393ce08dd56b21.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-7.5.0_1a8175463916a43c72934bc678803c4c9fd7129d\classes.dex" />
+        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-9.8.0_866ba1ad2de3ecfb327a07accbe8ccc9deb5fb19.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-7.5.0_2c7d113c084ca18d79a00fa1d3f24f1224c2538c\classes.dex" />
+        sha1="e56f31b23ddb067f95f01255295167db7c798612">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-9.8.0_01d69b4502e4f765bf4cbbaacd193887f9c0294d.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-awareness-9.8.0_4b11c95b7c8800a6b8ced347ebd8b0d418143b40.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-iid-9.8.0_a6803c5e0578ea8109c25fa7f06ae6128ce78d1f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.0.0_1e5040cc9d46fe499196e1e793aeb9a2b69c2f5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\LENOVO\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0_f72ee14f8a09aa524f3dc2d4ce6dba1aa29e1e7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\LENOVO\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_26a840d2cd1d04189e0f44f8341819bd049e1dcf\classes.dex" />
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_26a840d2cd1d04189e0f44f8341819bd049e1dcf.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\LENOVO\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
         sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\httpclient-4.3.6_afab9bd578f6cf0c25a0c4fb373f71b5319dde3d\classes.dex" />
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6_afab9bd578f6cf0c25a0c4fb373f71b5319dde3d.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-7.5.0_5c97f512a3b35741109d8ebd8d5be8936755546a\classes.dex" />
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.2.1_eda08e43806d0ef6d1ea574856b239a5ceafa1d7.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-22.0.0_319fc78a74a79935686915cdd68d3f65e8ec1c6a\classes.dex" />
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-9.8.0_e96994fab860fd890e223e6fb2bd1dd492710cd4.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.1_70246f511440f8df9ff41d3103810210f802fbd1\classes.dex" />
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.8.0_17ce1877877e75ef118281b45a5c6a7c1e44b0e8.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_7c76756a9a1b2d6a1c8dc5c3d12b1faa49d3973c\classes.dex" />
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-9.8.0_0aed169fceabcdf16b3a05afe6fe0120ebbad0ca.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="20a3c4e355150c15c13dd58045d43ad0c717d916">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-9.8.0_a923286bda2aca3eb1821c894e182b66bcb8e0cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-9.8.0_1b9c1f162b9f65bafa59e1747ebc99cb87a197ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-9.8.0_353db8ad1fa51d05448433150cf2b8c0100521cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-9.8.0_ed9b48df58b4d97240d4be197375fc8366c9bd8f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\LENOVO\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
         sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.4_21b17f0119e1916c9a214f240aa0e6f91740944e\classes.dex" />
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\gson-2.4_21b17f0119e1916c9a214f240aa0e6f91740944e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-7.5.0_9c62aa44b2ac66e977ad7851ad9e37b2aed89010\classes.dex" />
+        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-framework-9.8.0_55f09261bd31452ac37e6a042c9f3563015e6528.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.6.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
         sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.6.0_401b2174924a760a973a1a998ace60609cd21c15\classes.dex" />
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-android-sdk-4.6.0_401b2174924a760a973a1a998ace60609cd21c15.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-7.5.0_8019a8a7f89e06dd45edb47f71de448a023f91d2\classes.dex" />
+        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-messaging-9.8.0_d2658f6d991bb0e9e3b7f2cac90c64de5aff0d66.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-7.5.0_c815c0cde34cc5ba8f8c1a747ecfa245d43d29ca\classes.dex" />
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.0.0_ec6c6299a749169b07d82d4a508a97d3e265f054.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-7.5.0_a159a1ca643b78f81c3d8233ec734a7c3f720939\classes.dex" />
+        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-9.8.0_ea949ea4b947c6a2b0d0d9e5d49327771f7a841f.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-7.5.0_3ebbd1b6d6edc108a0fc34da087b5a6e6609a670\classes.dex" />
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-9.8.0_28392205a3f75cf06024a75e3676f22475155866.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="d405025c600055237c171a0bbabaa49d69696573">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-7.5.0_3a1b7fe972b30b138a058bd828e42cc5a0fb6fae\classes.dex" />
+        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-9.8.0_7adea1a17e071db29132e176a5eb0016c6d5385c.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-7.5.0_87411dc562c98eacf36fa78a8bf9ae0be59fe4c1\classes.dex" />
+        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-lite-9.8.0_6cb43562f721fa9979b59eb18b8478d0f56db9b3.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.1_c1ba47a75d2cd58527ec757668743df370c986f3\classes.dex" />
+        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-9.8.0_73a029b8a2ff5c6c272b19a22848101bb65a338f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_305511d340e2ae1b1732985dae661da4b8a07fbb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-24.0.0_729f4747cfa978748d1d04ca1ef3800b1cdbbd78.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-module-9.8.0_f72bc328bd31f1d7c5589f8a322b8a68311220a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.0.0_bed73f525fa62e518055d8c0bdbc5b4c799a174c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-9.8.0_89b395681c0f168228ecc62d924161453d2f65f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-9.8.0_d8b1833d3f4ab4c8417e2cacc67a3d12a78f2550.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="9ff04cc3470178a44512624036751a803418c2ca">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-9.8.0_4399df5eae1222680ffb02b6f02790d24178d2dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\LENOVO\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0_0287f6bf6acabcdb8d8125f465a8840c0be72527.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-crash-9.8.0_fcf2007b0bd9567ceff9e9daf8add1f1296913a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-9.8.0_285988e68063eda3d6b32f3859f8e38e07109cd4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-impl-9.8.0_1b5e6a4a4b28bc54be6fada9a6ef83f994e79467.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-9.8.0_ba32ad1e1a4a13da2c4bbd57dfb606b4be0e6bba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-9.8.0_9646c411a29c85cabd7598800d2fef23f066b141.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
+        <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gass-9.8.0_f17976e08f0f28c03ae6f2e7434a9e451bda671d.jar" />
     </item>
 
 </items>

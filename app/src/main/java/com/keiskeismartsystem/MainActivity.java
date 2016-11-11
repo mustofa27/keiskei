@@ -31,6 +31,7 @@ import android.widget.Toast;
 import com.keiskeismartsystem.dbsql.NotifTransact;
 import com.keiskeismartsystem.dbsql.WhereHelper;
 import com.keiskeismartsystem.fragment.AboutFragment;
+import com.keiskeismartsystem.fragment.CartFragment;
 import com.keiskeismartsystem.fragment.DashboardFragment;
 import com.keiskeismartsystem.fragment.DetailNotificationFragment;
 import com.keiskeismartsystem.fragment.EditProfilFragment;
@@ -206,6 +207,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 SettingFragment sfragment = new SettingFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_container, sfragment ).commit();
                 break;
+            case "cart":
+                startActivity(new Intent(this,CartActivity.class));
+                break;
         }
     }
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -222,8 +226,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_cart) {
+            changeBigFragment("cart");
         }
 
         return super.onOptionsItemSelected(item);

@@ -225,8 +225,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
                 _progress.dismiss();
                 Toast toast = Toast.makeText(getApplicationContext(), "Anda berhasil masuk ke sistem.", Toast.LENGTH_SHORT);
                 toast.show();
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                Intent intent = new Intent(this, SplashScreen.class);
                 startActivity(intent);
             }
             else{

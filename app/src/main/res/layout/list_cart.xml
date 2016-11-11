@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/gambar_cart"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/image_size_cart"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_weight="2"
+        android:src="@drawable/logo_splash_new" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/image_size_cart"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_weight="3">
+        <TextView
+            android:id="@+id/nama_produk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nama produk"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"/>
+        <EditText
+            android:id="@+id/jumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:textSize="18sp"
+            android:layout_below="@id/nama_produk"
+            android:textColor="@android:color/black"
+            android:hint="Quantity"/>
+        <TextView
+            android:id="@+id/harga_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RP 100000,00"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

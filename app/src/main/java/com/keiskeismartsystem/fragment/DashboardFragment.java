@@ -268,7 +268,7 @@ public class DashboardFragment extends Fragment {
                                                 bundle.putInt("id", products.get(0).getSid());
                                                 ProductDetail productDetail = new ProductDetail();
                                                 productDetail.setArguments(bundle);
-                                                getActivity().getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }
@@ -296,7 +296,7 @@ public class DashboardFragment extends Fragment {
                                                 bundle.putInt("id", products.get(1).getSid());
                                                 ProductDetail productDetail = new ProductDetail();
                                                 productDetail.setArguments(bundle);
-                                                getActivity().getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }
@@ -323,7 +323,7 @@ public class DashboardFragment extends Fragment {
                                                 bundle.putInt("id", products.get(2).getSid());
                                                 ProductDetail productDetail = new ProductDetail();
                                                 productDetail.setArguments(bundle);
-                                                getActivity().getFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }

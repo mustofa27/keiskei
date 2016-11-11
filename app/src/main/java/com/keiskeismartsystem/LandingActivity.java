@@ -41,7 +41,7 @@ import com.keiskeismartsystem.helper.UserSession;
 import com.keiskeismartsystem.library.HttpClient;
 import com.keiskeismartsystem.model.City;
 
-import org.apache.http.impl.client.DefaultHttpClient;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

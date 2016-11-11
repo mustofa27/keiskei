@@ -9,87 +9,81 @@
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tab_icon"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
         <LinearLayout
             android:id="@+id/product"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
+            android:orientation="horizontal"
             android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
+            android:gravity="center">
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home" />
+                android:src="@drawable/home"/>
         </LinearLayout>
-
         <LinearLayout
             android:id="@+id/login"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
+            android:orientation="horizontal"
             android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
+            android:gravity="center">
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home" />
+                android:src="@drawable/login"
+                android:padding="3dp"/>
         </LinearLayout>
-
         <LinearLayout
             android:id="@+id/register"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
+            android:orientation="horizontal"
             android:onClick="changeBigFragment"
-            android:orientation="horizontal">
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home" />
+                android:src="@drawable/register"
+                android:padding="3dp"/>
         </LinearLayout>
-
         <LinearLayout
             android:id="@+id/chat"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
+            android:orientation="horizontal"
             android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
+            android:gravity="center">
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home" />
+                android:src="@drawable/notif"/>
         </LinearLayout>
-
         <LinearLayout
             android:id="@+id/support"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/landing_bg_menu"
-            android:gravity="center"
+            android:orientation="horizontal"
             android:onClick="changeBigFragment"
-            android:orientation="horizontal">
-
+            android:gravity="center">
             <ImageView
                 android:layout_width="@dimen/tab_icon"
                 android:layout_height="@dimen/tab_icon"
-                android:src="@drawable/home" />
+                android:src="@drawable/contact_us"
+                android:padding="3dp"/>
         </LinearLayout>
     </LinearLayout>
 

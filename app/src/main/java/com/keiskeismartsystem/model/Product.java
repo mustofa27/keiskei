@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class Product implements Serializable {
     public static final String KEY = "PRODUCT_DATA";
-    private int _id, _sid;
+    private int _id, _sid, jumlah = 0;
     private String _title, _photo_int, _photo_ext, _description, _code, harga, kategori;
     public Product(){
         _code = "";
@@ -17,6 +17,15 @@ public class Product implements Serializable {
         _photo_ext = "";
         _description = "";
     }
+
+    public int getJumlah() {
+        return jumlah;
+    }
+
+    public void setJumlah(int jumlah) {
+        this.jumlah = jumlah;
+    }
+
     public void setId(int id){
         this._id = id;
     }
