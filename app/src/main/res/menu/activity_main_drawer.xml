@@ -21,7 +21,7 @@
         <item
             android:id="@+id/nav_produk"
             android:icon="@drawable/icon_drawer_produk"
-            android:title="Chat" />
+            android:title="Produk Kami" />
     </group>
 
 </menu>

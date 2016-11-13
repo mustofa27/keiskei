@@ -34,7 +34,7 @@ import java.util.List;
  * keiskei smartsystem_V2.
  */
 public class ChatAdapter extends ArrayAdapter<Chat> {
-    public static final String _base_url = "http://www.smartv2.lapantiga.com/";
+    public static final String _base_url = "https://keiskei.co.id/";
     private final ArrayList<Chat> chats;
     private Activity context;
     private static class ViewHolder {

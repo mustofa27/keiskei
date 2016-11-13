@@ -1,11 +1,9 @@
 package com.keiskeismartsystem;
 
-import android.app.Notification;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.Resources;
 import android.os.Build;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
@@ -23,15 +21,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TabHost;
 import android.widget.TabWidget;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.keiskeismartsystem.dbsql.NotifTransact;
 import com.keiskeismartsystem.dbsql.WhereHelper;
 import com.keiskeismartsystem.fragment.AboutFragment;
-import com.keiskeismartsystem.fragment.CartFragment;
 import com.keiskeismartsystem.fragment.DashboardFragment;
 import com.keiskeismartsystem.fragment.DetailNotificationFragment;
 import com.keiskeismartsystem.fragment.EditProfilFragment;
@@ -40,9 +35,7 @@ import com.keiskeismartsystem.fragment.ProductList;
 import com.keiskeismartsystem.fragment.ProfileFragment;
 import com.keiskeismartsystem.fragment.SettingFragment;
 import com.keiskeismartsystem.helper.UserSession;
-import com.keiskeismartsystem.model.Chat;
 import com.keiskeismartsystem.model.Notif;
-import com.keiskeismartsystem.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;

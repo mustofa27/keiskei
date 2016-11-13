@@ -70,7 +70,7 @@ public class DetailNotificationFragment extends Fragment {
     private static AlertDialog alertDialog;
     ShareDialog shareDialog;
     CallbackManager callbackManager;
-    public static final String _base_url = "http://www.smartv2.lapantiga.com/";
+    public static final String _base_url = "https://keiskei.co.id/";
 
 
     public DetailNotificationFragment() {
@@ -152,7 +152,7 @@ public class DetailNotificationFragment extends Fragment {
                                 if (ShareDialog.canShow(ShareLinkContent.class)) {
                                     if (notif.getPhotoExt() != null){
                                         ShareLinkContent content = new ShareLinkContent.Builder()
-                                                .setContentUrl(Uri.parse("https://smartv2.lapantiga.com.com"))
+                                                .setContentUrl(Uri.parse("https://keiskei.co.id"))
                                                 .setContentTitle("adfasf")
                                                 .setContentDescription("adfas")
                                                 .build();
@@ -160,7 +160,7 @@ public class DetailNotificationFragment extends Fragment {
 
                                     }else{
                                         ShareLinkContent content = new ShareLinkContent.Builder()
-                                                .setContentUrl(Uri.parse("https://smartv2.lapantiga.com.com"))
+                                                .setContentUrl(Uri.parse("https://keiskei.co.id"))
                                                 .setContentTitle(notif.getTitle())
                                                 .setContentDescription(notif.getDescription())
                                                 .build();
@@ -264,8 +264,8 @@ public class DetailNotificationFragment extends Fragment {
         protected Bitmap doInBackground(String... args) {
             Bitmap bitmap_t =  null;
             try {
-                Log.v("keiskeidebug", "http://www.smartv2.lapantiga.com/data/notification/" + args[0]);
-                bitmap_t = BitmapFactory.decodeStream((InputStream) new URL("http://www.smartv2.lapantiga.com/data/notification/" + args[0]).getContent());
+                Log.v("keiskeidebug", "https://keiskei.co.id/data/notification/" + args[0]);
+                bitmap_t = BitmapFactory.decodeStream((InputStream) new URL("https://keiskei.co.id/data/notification/" + args[0]).getContent());
 
             } catch (Exception e) {
                 e.printStackTrace();

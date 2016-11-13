@@ -42,7 +42,7 @@ import java.util.List;
 import java.util.logging.FileHandler;
 
 public class DashboardFragment extends Fragment {
-    public static final String _base_url = "http://www.smartv2.lapantiga.com/";
+    public static final String _base_url = "https://keiskei.co.id/";
     private static ImageView _im_user, _iv_product_1, _iv_product_2, _iv_product_3;
     private static TextView _t_buy, _t_code, _t_bonus;
     private static Button _chat, _voice_box;
@@ -165,8 +165,8 @@ public class DashboardFragment extends Fragment {
         protected Bitmap doInBackground(String... args) {
 
             try {
-                Log.v("keiskeidebug", "http://www.smartv2.lapantiga.com/data/user/photo/" + args[0]);
-                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("http://www.smartv2.lapantiga.com/data/user/photo/" + args[0]).getContent());
+                Log.v("keiskeidebug", "https://keiskei.co.id/data/user/photo/" + args[0]);
+                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("https://keiskei.co.id/data/user/photo/" + args[0]).getContent());
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -252,90 +252,92 @@ public class DashboardFragment extends Fragment {
                         _productTransact.insert(product);
                         products.add(product);
                     }
-                    final String url_t = "http://www.smartv2.lapantiga.com/products/detail/";
-                    Log.v("keiskeidebug", products.get(0).getPhotoExt());
-                    Picasso.with(_context).load(_base_url + products.get(0).getPhotoExt())
-                            .placeholder(R.drawable.im_picture)
-                            .error(R.drawable.im_picture)
-                            .into(_iv_product_1, new com.squareup.picasso.Callback() {
-                                @Override
-                                public void onSuccess() {
-                                    _iv_product_1.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            try {
-                                                Bundle bundle = new Bundle();
-                                                bundle.putInt("id", products.get(0).getSid());
-                                                ProductDetail productDetail = new ProductDetail();
-                                                productDetail.setArguments(bundle);
-                                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
-                                            }catch (Exception e){
-                                                e.printStackTrace();
+                    final String url_t = "https://keiskei.co.id/products/detail/";
+                    if(products.size() > 0) {
+                        Log.v("keiskeidebug", products.get(0).getPhotoExt());
+                        Picasso.with(_context).load(_base_url + products.get(0).getPhotoExt())
+                                .placeholder(R.drawable.im_picture)
+                                .error(R.drawable.im_picture)
+                                .into(_iv_product_1, new com.squareup.picasso.Callback() {
+                                    @Override
+                                    public void onSuccess() {
+                                        _iv_product_1.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                try {
+                                                    Bundle bundle = new Bundle();
+                                                    bundle.putInt("id", products.get(0).getSid());
+                                                    ProductDetail productDetail = new ProductDetail();
+                                                    productDetail.setArguments(bundle);
+                                                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                                                } catch (Exception e) {
+                                                    e.printStackTrace();
+                                                }
                                             }
-                                        }
-                                    });
-                                }
+                                        });
+                                    }
 
-                                @Override
-                                public void onError() {
+                                    @Override
+                                    public void onError() {
 
-                                }
-                            });
+                                    }
+                                });
 
-                    Picasso.with(_context).load(_base_url + products.get(1).getPhotoExt())
-                            .placeholder(R.drawable.im_picture)
-                            .error(R.drawable.im_picture)
-                            .into(_iv_product_2, new com.squareup.picasso.Callback() {
-                                @Override
-                                public void onSuccess() {
-                                    _iv_product_2.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            try {
-                                                Bundle bundle = new Bundle();
-                                                bundle.putInt("id", products.get(1).getSid());
-                                                ProductDetail productDetail = new ProductDetail();
-                                                productDetail.setArguments(bundle);
-                                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
-                                            }catch (Exception e){
-                                                e.printStackTrace();
+                        Picasso.with(_context).load(_base_url + products.get(1).getPhotoExt())
+                                .placeholder(R.drawable.im_picture)
+                                .error(R.drawable.im_picture)
+                                .into(_iv_product_2, new com.squareup.picasso.Callback() {
+                                    @Override
+                                    public void onSuccess() {
+                                        _iv_product_2.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                try {
+                                                    Bundle bundle = new Bundle();
+                                                    bundle.putInt("id", products.get(1).getSid());
+                                                    ProductDetail productDetail = new ProductDetail();
+                                                    productDetail.setArguments(bundle);
+                                                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                                                } catch (Exception e) {
+                                                    e.printStackTrace();
+                                                }
                                             }
-                                        }
-                                    });
-                                }
+                                        });
+                                    }
 
-                                @Override
-                                public void onError() {
+                                    @Override
+                                    public void onError() {
 
-                                }
-                            });
-                    Picasso.with(_context).load(_base_url + products.get(2).getPhotoExt())
-                            .placeholder(R.drawable.im_picture)
-                            .error(R.drawable.im_picture)
-                            .into(_iv_product_3, new com.squareup.picasso.Callback() {
-                                @Override
-                                public void onSuccess() {
-                                    _iv_product_3.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            try {
-                                                Bundle bundle = new Bundle();
-                                                bundle.putInt("id", products.get(2).getSid());
-                                                ProductDetail productDetail = new ProductDetail();
-                                                productDetail.setArguments(bundle);
-                                                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
-                                            }catch (Exception e){
-                                                e.printStackTrace();
+                                    }
+                                });
+                        Picasso.with(_context).load(_base_url + products.get(2).getPhotoExt())
+                                .placeholder(R.drawable.im_picture)
+                                .error(R.drawable.im_picture)
+                                .into(_iv_product_3, new com.squareup.picasso.Callback() {
+                                    @Override
+                                    public void onSuccess() {
+                                        _iv_product_3.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                try {
+                                                    Bundle bundle = new Bundle();
+                                                    bundle.putInt("id", products.get(2).getSid());
+                                                    ProductDetail productDetail = new ProductDetail();
+                                                    productDetail.setArguments(bundle);
+                                                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                                                } catch (Exception e) {
+                                                    e.printStackTrace();
+                                                }
                                             }
-                                        }
-                                    });
-                                }
+                                        });
+                                    }
 
-                                @Override
-                                public void onError() {
+                                    @Override
+                                    public void onError() {
 
-                                }
-                            });
+                                    }
+                                });
+                    }
                 }
                 else{
                     Toast toast = Toast.makeText(_context, "Terjadi kesalahan.", Toast.LENGTH_SHORT);

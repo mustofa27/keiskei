@@ -243,7 +243,7 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
             }
         }
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post( "http://smartv2.lapantiga.com/m/updateprofiletwo", data, new JsonHttpResponseHandler(){
+        client.post( "https://keiskei.co.id/m/updateprofiletwo", data, new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 String resp = "";
@@ -456,7 +456,7 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
         protected Bitmap doInBackground(String... args) {
 
             try {
-                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("http://www.smartv2.lapantiga.com/data/user/photo/" + args[0]).getContent());
+                bitmap_t = BitmapFactory.decodeStream((InputStream)new URL("https://keiskei.co.id/data/user/photo/" + args[0]).getContent());
 
             } catch (Exception e) {
                 e.printStackTrace();

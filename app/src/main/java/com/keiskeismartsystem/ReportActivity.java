@@ -108,7 +108,7 @@ public class ReportActivity extends AppCompatActivity {
         RequestParams data = new RequestParams();
         data.put("email", params[0]);
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post("http://www.smartv2.lapantiga.com/m/transactions/get", data, new JsonHttpResponseHandler() {
+        client.post("https://keiskei.co.id/m/transactions/get", data, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 String resp = "";

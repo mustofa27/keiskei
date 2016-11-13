@@ -31,31 +31,31 @@
             android:configChanges="orientation"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_register"
             android:screenOrientation="portrait"
             android:theme="@style/noAnimTheme"
-            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+            android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
             android:name=".LoginActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait"
-            android:theme="@style/noAnimTheme"></activity>
+            android:theme="@style/noAnimTheme" />
         <activity
             android:name=".LandingActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_landing"
             android:screenOrientation="portrait"
-            android:theme="@style/noAnimTheme"></activity>
+            android:theme="@style/noAnimTheme" />
         <activity
             android:name=".MainanActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_mainan"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -131,7 +131,17 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".CartActivity"></activity>
+        <activity
+            android:name=".CartActivity"
+            android:label="Your Cart"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ProductDetail"
+            android:label="Product Detail"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Pembayaran"
+            android:label="Pembayaran"
+            android:parentActivityName=".CartActivity" ></activity>
     </application>
 
 </manifest>

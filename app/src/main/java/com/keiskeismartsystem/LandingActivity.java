@@ -74,7 +74,7 @@ public class LandingActivity extends AppCompatActivity {
     GCMClientManager gcmClientManager;
 
     private static ProgressDialog _progress;
-    private static final String _base_url = "http://www.smartv2.lapantiga.com/";
+    private static final String _base_url = "https://keiskei.co.id/";
     public static final String PROJECT_NUMBER = "503282155389";
 
     @Override
@@ -278,7 +278,7 @@ public class LandingActivity extends AppCompatActivity {
             Log.v("keiskeidebug", request.code() + "");
 
             try {
-                URL url = new URL("http://www.smartv2.lapantiga.com/m/init/city");
+                URL url = new URL("https://keiskei.co.id/m/init/city");
                 in = new BufferedInputStream(url.openStream());
                 File mediaStorageDir = new File(Environment.getExternalStorageDirectory()
                         + "/Android/data/"

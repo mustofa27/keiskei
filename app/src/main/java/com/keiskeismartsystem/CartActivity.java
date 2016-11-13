@@ -1,13 +1,20 @@
 package com.keiskeismartsystem;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.wallet.Cart;
 import com.keiskeismartsystem.adapter.CartListAdapter;
 import com.keiskeismartsystem.helper.ConnectionDetector;
 import com.keiskeismartsystem.helper.UserSession;
@@ -26,9 +33,11 @@ public class CartActivity extends AppCompatActivity {
     ListView listView;
     UserSession userSession;
     ProgressDialog _progress;
+    private Integer total_harga;
     private static ConnectionDetector _conn;
+    TextView total;
     CartListAdapter adapter;
-    public static final String _base_url = "http://www.smartv2.lapantiga.com/";
+    public static final String _base_url = "https://keiskei.co.id/";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +50,8 @@ public class CartActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this,"Tidak ada koneksi internet.", Toast.LENGTH_SHORT);
             toast.show();
         }
+        total = (TextView) findViewById(R.id.total);
+        total_harga = 0;
         _progress = new ProgressDialog(this);
         _progress.setCancelable(true);
         _progress.setMessage("Getting data..");
@@ -103,6 +114,7 @@ public class CartActivity extends AppCompatActivity {
                             product.setHarga(tmp.getString("harga"));
                             product.setKategori(tmp.getString("kategori"));
                             product.setJumlah(1);
+                            total_harga+=Integer.valueOf(tmp.getString("harga"));
                         } catch (JSONException e) {
                             e.printStackTrace();
                             continue;
@@ -111,11 +123,17 @@ public class CartActivity extends AppCompatActivity {
                     }
                     if(productList.size()!=0){
                         populateList();
+                        total.setText("RP "+String.valueOf(total_harga)+",00");
                     }
                 }
                 else{
-                    Toast toast = Toast.makeText(CartActivity.this, "Terjadi kesalahan.", Toast.LENGTH_SHORT);
-                    toast.show();
+                    new AlertDialog.Builder(CartActivity.this).setTitle("Status Keranjang")
+                            .setMessage(json.getString("MESSAGE")).setPositiveButton("OKE", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            onBackPressed();
+                        }
+                    }).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -124,9 +142,11 @@ public class CartActivity extends AppCompatActivity {
         }
     }
 
+
     private void populateList()
     {
-        adapter = new CartListAdapter(CartActivity.this,productList);
+        adapter = new CartListAdapter(CartActivity.this,productList, userSession);
         listView.setAdapter(adapter);
+        ((LinearLayout) findViewById(R.id.checkout_parent)).setVisibility(View.VISIBLE);
     }
 }

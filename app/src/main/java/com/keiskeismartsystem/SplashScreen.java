@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SplashScreen extends Activity {
-    public static final String _base_url = "http://www.smartv2.lapantiga.com/";
+    public static final String _base_url = "https://keiskei.co.id/";
     private static ProductTransact _productTransact;
     private static UserSession userSession;
     @Override

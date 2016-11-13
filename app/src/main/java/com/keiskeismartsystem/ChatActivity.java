@@ -309,7 +309,7 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
         data.put("handphone", params[7]);
 
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post( "http://smartv2.lapantiga.com/m/chat/storetwo", data, new JsonHttpResponseHandler(){
+        client.post( "https://keiskei.co.id/m/chat/storetwo", data, new JsonHttpResponseHandler(){
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 Log.v("keiskeidebug", "loopj2 chat " + statusCode);
@@ -457,7 +457,7 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
             }
         }
         AsyncHttpClient client = new AsyncHttpClient(true, 80, 443);
-        client.post( "http://smartv2.lapantiga.com/m/chat/storetwo", data, new JsonHttpResponseHandler(){
+        client.post( "https://keiskei.co.id/m/chat/storetwo", data, new JsonHttpResponseHandler(){
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 Log.v("keiskeidebug", "loopj2 chat " + statusCode);

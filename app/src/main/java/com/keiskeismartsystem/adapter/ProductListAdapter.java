@@ -1,6 +1,7 @@
 package com.keiskeismartsystem.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -25,7 +26,7 @@ import java.util.List;
 public class ProductListAdapter extends ArrayAdapter<List<Product>> {
     FragmentActivity activity;
     List<List<Product>> products;
-    String _base_url = "http://www.smartv2.lapantiga.com/";
+    String _base_url = "https://keiskei.co.id/";
     public ProductListAdapter(FragmentActivity activity, List<List<Product>> productList){
         super(activity,R.layout.list_product,productList);
         this.activity = activity;
@@ -45,34 +46,26 @@ public class ProductListAdapter extends ArrayAdapter<List<Product>> {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(activity,DetailOutlet.class);
-                intent.putExtra("kd_outlet", currentOutlet.getKode());
-                startActivity(intent);*/
-                Bundle bundle = new Bundle();
-                bundle.putInt("id", currentProduct.get(0).getSid());
-                ProductDetail productDetail = new ProductDetail();
-                productDetail.setArguments(bundle);
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
+                Intent intent = new Intent(activity, com.keiskeismartsystem.ProductDetail.class);
+                intent.putExtra("id", currentProduct.get(0).getSid());
+                activity.startActivity(intent);
             }
         });
-        imageView = (ImageView) convertView.findViewById(R.id.gambar_produk1);
-        Picasso.with(activity).load(_base_url + currentProduct.get(1).getPhotoExt())
-                .placeholder(R.drawable.im_picture)
-                .error(R.drawable.im_picture)
-                .into(imageView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*Intent intent = new Intent(activity,DetailOutlet.class);
-                intent.putExtra("kd_outlet", currentOutlet.getKode());
-                startActivity(intent);*/
-                Bundle bundle = new Bundle();
-                bundle.putInt("id", currentProduct.get(1).getSid());
-                ProductDetail productDetail = new ProductDetail();
-                productDetail.setArguments(bundle);
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content_container, productDetail).commit();
-            }
-        });
+        if(currentProduct.size() == 2) {
+            imageView = (ImageView) convertView.findViewById(R.id.gambar_produk1);
+            Picasso.with(activity).load(_base_url + currentProduct.get(1).getPhotoExt())
+                    .placeholder(R.drawable.im_picture)
+                    .error(R.drawable.im_picture)
+                    .into(imageView);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(activity, com.keiskeismartsystem.ProductDetail.class);
+                    intent.putExtra("id", currentProduct.get(1).getSid());
+                    activity.startActivity(intent);
+                }
+            });
+        }
         return convertView;
     }
 }

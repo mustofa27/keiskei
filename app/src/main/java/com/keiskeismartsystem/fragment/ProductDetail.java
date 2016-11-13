@@ -19,6 +19,8 @@ import com.keiskeismartsystem.dbsql.WhereHelper;
 import com.keiskeismartsystem.helper.ConnectionDetector;
 import com.keiskeismartsystem.helper.UserSession;
 import com.keiskeismartsystem.model.Product;
+import com.keiskeismartsystem.socket.AsyncResponse;
+import com.keiskeismartsystem.socket.ClientSocket;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -43,7 +45,7 @@ import static com.facebook.FacebookSdk.getApplicationContext;
  * Use the {@link ProductDetail#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProductDetail extends Fragment {
+public class ProductDetail extends Fragment implements AsyncResponse {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -52,7 +54,7 @@ public class ProductDetail extends Fragment {
     Product product;
     ProductTransact productTransact;
     TextView nm_produk, nm_kategori, nom_harga, nm_kode, desc;
-    String _base_url = "http://www.smartv2.lapantiga.com/";
+    String _base_url = "https://keiskei.co.id/";
     Button button;
     private static ProgressDialog _progress;
     private UserSession _user_session;
@@ -134,46 +136,10 @@ public class ProductDetail extends Fragment {
                     _progress.setProgress(0);
                     _progress.setMax(100);
                     _progress.show();
-                    RequestParams data = new RequestParams();
-                    data.put("id", _user_session.getUserSessionData().getID());
-                    data.put("id_product", product.getSid());
-                    AsyncHttpClient client = new AsyncHttpClient();
-                    client.post("http://smartv2.lapantiga.com/m/cart/set", data, new JsonHttpResponseHandler() {
-                        @Override
-                        public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                            String resp = "";
-                            try {
-                                resp = response.getString("RESP");
-                                if (resp.equals("SCSCRT")) {
-                                    String data;
-                                    data = response.getString("MESSAGE");
-                                    _progress.dismiss();
-                                    Toast toast = Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT);
-                                    toast.show();
-                                } else if (resp.equals("FLDCRT")) {
-                                    String data;
-                                    data = response.getString("MESSAGE");
-                                    _progress.dismiss();
-                                    Toast toast = Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT);
-                                    toast.show();
-                                } else {
-                                    _progress.dismiss();
-                                    Toast toast = Toast.makeText(getActivity(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
-                                    toast.show();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            super.onSuccess(statusCode, headers, response);
-                        }
-
-                        @Override
-                        public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
-                            _progress.dismiss();
-                            Toast toast = Toast.makeText(getActivity(), "Terjadi kesalahan server.", Toast.LENGTH_SHORT);
-                            toast.show();
-                        }
-                    });
+                    String[] params = new String[]{ "BUY", String.valueOf(_user_session.getUserSessionData().getID()), String.valueOf(product.getSid())};
+                    ClientSocket cs = new ClientSocket(getActivity().getApplicationContext());
+                    cs.delegate = ProductDetail.this;
+                    cs.execute(params);
 
 
                 }
@@ -195,6 +161,39 @@ public class ProductDetail extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void processFinish(String output) {
+        JSONObject response = new JSONObject();
+        try {
+            response = new JSONObject(output);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        String resp = "";
+        try {
+            resp = response.getString("RESP");
+            if (resp.equals("SCSCRT")) {
+                String data;
+                data = response.getString("MESSAGE");
+                _progress.dismiss();
+                Toast toast = Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT);
+                toast.show();
+            } else if (resp.equals("FLDCRT")) {
+                String data;
+                data = response.getString("MESSAGE");
+                _progress.dismiss();
+                Toast toast = Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT);
+                toast.show();
+            } else {
+                _progress.dismiss();
+                Toast toast = Toast.makeText(getActivity(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

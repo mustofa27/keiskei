@@ -18,7 +18,7 @@
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="city">Kota</string>
-    <string name="website">www.smartv2.lapantiga.com</string>
+    <string name="website">keiskei.co.id</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -45,7 +45,7 @@
     <string name="question">Pertanyaan</string>
     <string name="submit">Submit</string>
     <string name="attach_file">Attach Image</string>
-    <string name="title_activity_chat">Keiskei Chatt</string>
+    <string name="title_activity_chat">Keiskei Chat</string>
     <string name="list_transactions">Daftar Transaksi</string>
     <string name="facebook_app_id">727802654022279</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
