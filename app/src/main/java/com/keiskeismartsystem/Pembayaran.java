@@ -1,10 +1,11 @@
 package com.keiskeismartsystem;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class Pembayaran extends AppCompatActivity {
-
+    ProgressDialog _progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

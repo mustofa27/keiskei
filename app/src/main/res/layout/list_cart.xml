@@ -49,8 +49,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_below="@id/top"
             android:spinnerMode="dropdown"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/harga_cart"
