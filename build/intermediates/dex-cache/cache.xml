@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="7620c47b931faa0d6e7394932dec7f2a70a8e0db">
+        sha1="c77bc49f2de407452e115d6409e692eed80d8b9c">
         <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_00dec463f8c26b35e8bd85cd088519b27b23ac76\classes.dex" />
     </item>
     <item
@@ -475,7 +475,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="effbaccee8294f22fdd381944c1188f931ef783d">
+        sha1="1bae51f9e4b7f4d928befef445cacdd507619cd0">
         <dex dex="E:\5112100100\Semester 8\Bismillah Kerja\SmartSystem_V2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c39d08be3c2b1f6f654d788db837792bdef09687\classes.dex" />
     </item>
     <item

@@ -128,6 +128,9 @@ public class ProductTransact {
             dbHandler.close();
             return result;
         }
+        else{
+            update(product);
+        }
         return 0;
     }
     public void update(Product product){
@@ -142,7 +145,7 @@ public class ProductTransact {
         contentValues.put("harga", product.getHarga());
         contentValues.put("kategori", product.getKategori());
 
-        dbHandler.update(TABLE_NAME, contentValues, " id = " + product.getId());
+        dbHandler.update(TABLE_NAME, contentValues, " server_id = " + product.getSid());
         dbHandler.close();
     }
     public void truncate() {

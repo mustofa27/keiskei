@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -37,6 +38,7 @@ public class CartActivity extends AppCompatActivity {
     private static ConnectionDetector _conn;
     TextView total;
     CartListAdapter adapter;
+    Button bayar;
     public static final String _base_url = "https://keiskei.co.id/";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class CartActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this,"Tidak ada koneksi internet.", Toast.LENGTH_SHORT);
             toast.show();
         }
+        bayar = (Button) findViewById(R.id.bayar);
         total = (TextView) findViewById(R.id.total);
         total_harga = 0;
         _progress = new ProgressDialog(this);
@@ -113,7 +116,7 @@ public class CartActivity extends AppCompatActivity {
                             product.setPhotoExt(tmp.getString("image"));
                             product.setHarga(tmp.getString("harga"));
                             product.setKategori(tmp.getString("kategori"));
-                            product.setJumlah(1);
+                            product.setJumlah(Integer.valueOf(tmp.getString("jumlah")));
                             total_harga+=Integer.valueOf(tmp.getString("harga"));
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -141,12 +144,20 @@ public class CartActivity extends AppCompatActivity {
 
         }
     }
-
-
+    public void changeTotal(int jumlah){
+        total_harga += jumlah;
+        total.setText("RP "+String.valueOf(total_harga)+",00");
+    }
     private void populateList()
     {
         adapter = new CartListAdapter(CartActivity.this,productList, userSession);
         listView.setAdapter(adapter);
         ((LinearLayout) findViewById(R.id.checkout_parent)).setVisibility(View.VISIBLE);
+        bayar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

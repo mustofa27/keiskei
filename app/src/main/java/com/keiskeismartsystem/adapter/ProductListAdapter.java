@@ -35,23 +35,23 @@ public class ProductListAdapter extends ArrayAdapter<List<Product>> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(convertView == null)
-            convertView = activity.getLayoutInflater().inflate(R.layout.list_product, parent, false);
         final List<Product> currentProduct = products.get(position);
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.gambar_produk);
-        Picasso.with(activity).load(_base_url + currentProduct.get(0).getPhotoExt())
-                .placeholder(R.drawable.im_picture)
-                .error(R.drawable.im_picture)
-                .into(imageView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(activity, com.keiskeismartsystem.ProductDetail.class);
-                intent.putExtra("id", currentProduct.get(0).getSid());
-                activity.startActivity(intent);
-            }
-        });
         if(currentProduct.size() == 2) {
+            /*if(convertView == null)
+                */convertView = activity.getLayoutInflater().inflate(R.layout.list_product, parent, false);
+            ImageView imageView = (ImageView) convertView.findViewById(R.id.gambar_produk);
+            Picasso.with(activity).load(_base_url + currentProduct.get(0).getPhotoExt())
+                    .placeholder(R.drawable.im_picture)
+                    .error(R.drawable.im_picture)
+                    .into(imageView);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(activity, com.keiskeismartsystem.ProductDetail.class);
+                    intent.putExtra("id", currentProduct.get(0).getSid());
+                    activity.startActivity(intent);
+                }
+            });
             imageView = (ImageView) convertView.findViewById(R.id.gambar_produk1);
             Picasso.with(activity).load(_base_url + currentProduct.get(1).getPhotoExt())
                     .placeholder(R.drawable.im_picture)
@@ -62,6 +62,23 @@ public class ProductListAdapter extends ArrayAdapter<List<Product>> {
                 public void onClick(View v) {
                     Intent intent = new Intent(activity, com.keiskeismartsystem.ProductDetail.class);
                     intent.putExtra("id", currentProduct.get(1).getSid());
+                    activity.startActivity(intent);
+                }
+            });
+        }
+        else {
+            /*if(convertView == null)
+                */convertView = activity.getLayoutInflater().inflate(R.layout.single_list_product, parent, false);
+            ImageView imageView = (ImageView) convertView.findViewById(R.id.gambar_produk_single);
+            Picasso.with(activity).load(_base_url + currentProduct.get(0).getPhotoExt())
+                    .placeholder(R.drawable.im_picture)
+                    .error(R.drawable.im_picture)
+                    .into(imageView);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(activity, com.keiskeismartsystem.ProductDetail.class);
+                    intent.putExtra("id", currentProduct.get(0).getSid());
                     activity.startActivity(intent);
                 }
             });
