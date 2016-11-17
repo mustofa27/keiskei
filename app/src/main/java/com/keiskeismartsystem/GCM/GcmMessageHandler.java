@@ -107,7 +107,7 @@ public class GcmMessageHandler extends GcmListenerService {
         PendingIntent pintent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
-                .setSmallIcon(R.drawable.icon_notif).setContentTitle(bundle.getString("title"))
+                .setSmallIcon(R.drawable.notif_icon_white).setContentTitle(bundle.getString("title"))
                 .setContentText("Silahkan buka dan login untuk melihat pesan.");
         mBuilder.setContentIntent(pintent);
         mBuilder.setAutoCancel(true);

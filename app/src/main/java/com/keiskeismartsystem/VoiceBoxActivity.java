@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +32,8 @@ import com.keiskeismartsystem.helper.ConnectionDetector;
 import com.keiskeismartsystem.helper.ImageCompression;
 import com.keiskeismartsystem.helper.ImageHelper;
 import com.keiskeismartsystem.helper.UserSession;
+import com.keiskeismartsystem.library.HttpClient;
+import com.keiskeismartsystem.model.Chat;
 import com.keiskeismartsystem.model.User;
 import com.keiskeismartsystem.socket.AsyncResponse;
 import com.keiskeismartsystem.socket.ClientSocket;
@@ -45,6 +48,10 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -197,70 +204,90 @@ public class VoiceBoxActivity extends AppCompatActivity implements AsyncResponse
 //        cs.execute(params);
     }
     public void sendImageLoopj(String[] params){
-        RequestParams data = new RequestParams();
-        data.put("name", params[1]);
-        data.put("email", params[2]);
-        data.put("handphone", params[3]);
-        data.put("title", params[4]);
-        data.put("description", params[5]);
-        data.put("is_anonymous", params[6]);
-        data.put("gcm_id", params[7]);
-        data.put("user_id", params[8]);
-        if(!temp_path.isEmpty()){
-            try
-            {
-                File temp_file = new File(temp_path);
-                data.put("photo", temp_file);
-                temp_path = "";
-            }catch(Exception e){
+        new SendImageLoopj(params).execute();
+    }
+    private class SendImageLoopj extends AsyncTask<String, Void, String> {
+        String[] params;
+        SendImageLoopj(String[] params){
+            this.params = params;
+        }
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+        protected String doInBackground(String... args) {
+            String resp = "";
+            try {
+                String url = "https://keiskei.co.id/m/voicebox/storetwo";
+                HttpClient request = HttpClient.post(url);
+                request.part("name", params[1]);
+                request.part("email", params[2]);
+                request.part("handphone", params[3]);
+                request.part("title", params[4]);
+                request.part("description", params[5]);
+                request.part("is_anonymous", params[6]);
+                request.part("gcm_id", params[7]);
+                request.part("user_id", params[8]);
+                if(!temp_path.isEmpty()){
+                    try
+                    {
+                        File temp_file = new File(temp_path);
+                        request.part("photo", temp_file);
+                        temp_path = "";
+                    }catch(Exception e){
 
+                    }
+                }
+                if (request.ok())
+                {
+                    resp = request.body();
+                }else{
+                    resp = "{RESP : 'ERROR' }";
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return resp;
+        }
+
+        protected void onPostExecute(String output) {
+            Log.v("keiskeidebug", output);
+            JSONObject response = new JSONObject();
+            try {
+                response = new JSONObject(output);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            String resp = "";
+            try {
+                resp = response.getString("RESP");
+                if(resp.equals("SCSVCBX")){
+                    String data;
+                    data = response.getString("MESSAGE");
+                    _progress.dismiss();
+                    _et_title.setText("");
+                    _et_description.setText("");
+
+                    Toast toast = Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+                else if(resp.equals("FLDRGSTR")){
+                    String data;
+                    data = response.getString("MESSAGE");
+                    _progress.dismiss();
+                    Toast toast = Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT);
+                    toast.show();
+                }else{
+                    _progress.dismiss();
+                    Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         }
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.post( "https://keiskei.co.id/m/voicebox/storetwo", data, new JsonHttpResponseHandler(){
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                String resp = "";
-                try {
-                    resp = response.getString("RESP");
-                    if(resp.equals("SCSVCBX")){
-                        String data;
-                        data = response.getString("MESSAGE");
-                        _progress.dismiss();
-                        _et_title.setText("");
-                        _et_description.setText("");
-
-                        Toast toast = Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT);
-                        toast.show();
-                    }
-                    else if(resp.equals("FLDRGSTR")){
-                        String data;
-                        data = response.getString("MESSAGE");
-                        _progress.dismiss();
-                        Toast toast = Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT);
-                        toast.show();
-                    }else{
-                        _progress.dismiss();
-                        Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
-                        toast.show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                super.onSuccess(statusCode, headers, response);
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
-                _progress.dismiss();
-                Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan server.", Toast.LENGTH_SHORT);
-                toast.show();
-            }
-        });
-
-
     }
-
     private boolean isValidEmail(String email_t, EditText et_email) {
         String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                 + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";

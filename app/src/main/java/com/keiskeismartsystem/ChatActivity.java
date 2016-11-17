@@ -11,6 +11,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -299,279 +300,313 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
 
     }
     public void sendImageLoopjDua(String[] params){
-        RequestParams data = new RequestParams();
-        data.put("description", params[1]);
-        data.put("is_anonymous", params[2]);
-        data.put("gcm_id", params[3]);
-        data.put("user_id", params[4]);
-        data.put("name", params[5]);
-        data.put("email", params[6]);
-        data.put("handphone", params[7]);
-
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.post( "https://keiskei.co.id/m/chat/storetwo", data, new JsonHttpResponseHandler(){
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Log.v("keiskeidebug", "loopj2 chat " + statusCode);
-                Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan server.", Toast.LENGTH_SHORT);
-                toast.show();
-            }
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
-
-                Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan server.", Toast.LENGTH_SHORT);
-                toast.show();
-            }
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                Log.v("keiskeidebug", "loopj chat " + statusCode);
-
-                String resp = "";
-                try {
-                    resp = response.getString("RESP");
-                    if(resp.equals("SCSCHT")){
-                        String data;
-                        data = response.getString("DATA");
-                        JSONObject notif_t = new JSONObject(data);
-                        Chat chat = new Chat();
-                        try {
-                            chat.setSid(Integer.parseInt(notif_t.getString("id")));
-                            try {
-                                String name = notif_t.getString("name");
-                                chat.setName(name);
-                            }catch (Exception e){
-                                chat.setName("");
-                            };
-
-                            try {
-                                String description_t = notif_t.getString("description");
-                                chat.setDescription(description_t);
-                            }catch (Exception e){
-                                chat.setDescription("");
-                            };
-
-                            try {
-                                String photo_t = notif_t.getString("photo");
-                                chat.setPhotoExt(photo_t);
-                            }catch (Exception e){
-                                chat.setPhotoExt("");
-                            };
-                            try {
-                                String photo_t = notif_t.getString("path_user");
-                                chat.setPhotoInt(photo_t);
-                            }catch (Exception e){
-                                chat.setPhotoInt("");
-                            };
-                            try {
-                                String is_admin_t = notif_t.getString("is_admin");
-                                char is_admin_c = is_admin_t.charAt(0);
-                                chat.setIsAdmin(is_admin_c);
-                            }catch (Exception e){
-                                chat.setIsAdmin('0');
-                            };
-                            try {
-                                String is_admin_t = notif_t.getString("read_flag");
-                                char is_admin_c = is_admin_t.charAt(0);
-                                chat.setReadFlag(is_admin_c);
-                            }catch (Exception e){
-                                chat.setReadFlag('0');
-                            };
-
-                            try {
-                                String created_at_t = notif_t.getString("created_at");
-                                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                                Date date = format.parse(created_at_t);
-                                chat.setCreatedAt(date);
-                            }catch (ParseException e){
-
-                                Calendar c = Calendar.getInstance();
-                                Date date = c.getTime();
-                                chat.setCreatedAt(date);
-                            }
-                            String realpath = chat.getPhotoInt();
-                            if(realpath != null || realpath.isEmpty()){
-                                File file = new File(realpath);
-                                if (file.exists()){
-                                    BitmapFactory.Options bmo = new BitmapFactory.Options();
-                                    try {
-                                        Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), bmo);
-                                        ImageHelper ih = new ImageHelper();
-                                        String path_t = ih.storeImage(getApplicationContext(), bitmap);
-                                        chat.setPhotoInt(path_t);
-                                    }catch (OutOfMemoryError e){
-                                        e.printStackTrace();
-                                    }
-                                }
-                            }
-                            _chatTransact.insert(chat);
-                            displayMessage(chat);
-
-                        }catch (Exception e){
-                            Log.v("keiskeidebug", e.toString());
-                            e.printStackTrace();
-                        }
-                    }
-                    else if(resp.equals("FLDRGSTR")){
-                        String data;
-                        data = response.getString("MESSAGE");
-                        Toast toast = Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT);
-                        toast.show();
-                    }else{
-                        Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
-                        toast.show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
+        new SendImageLoopjDua(params).execute();
 
     }
-    public void sendImageLoopj(String[] params){
-        RequestParams data = new RequestParams();
-        data.put("description", params[1]);
-        data.put("is_anonymous", params[2]);
-        data.put("gcm_id", params[3]);
-        data.put("user_id", params[4]);
-
-        data.put("name", params[6]);
-        data.put("email", params[7]);
-        data.put("handphone", params[8]);
-
-        String path = params[5];
-        Log.v("keiskeidebug", "belum " + path);
-
-
-        if(!path.isEmpty()){
-            try
-            {
-
-                File temp_file = new File(path);
-                data.put("photo", temp_file);
-                path = "";
-                Log.v("keiskeidebug", "masuk file " + path);
-            }catch(Exception e){
-
-                Log.v("keiskeidebug", "gagal file " + path);
-            }
+    private class SendImageLoopjDua extends AsyncTask<String, Void, String> {
+        String[] params;
+        SendImageLoopjDua(String[] params){
+            this.params = params;
         }
-        AsyncHttpClient client = new AsyncHttpClient(true, 80, 443);
-        client.post( "https://keiskei.co.id/m/chat/storetwo", data, new JsonHttpResponseHandler(){
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Log.v("keiskeidebug", "loopj2 chat " + statusCode);
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+        protected String doInBackground(String... args) {
+            String resp = "";
+            try {
+                String url = "https://keiskei.co.id/m/chat/storetwo";
+                HttpClient request = HttpClient.post(url);
+                request.part("description", params[1]);
+                request.part("is_anonymous", params[2]);
+                request.part("gcm_id", params[3]);
+                request.part("user_id", params[4]);
+                request.part("name", params[5]);
+                request.part("email", params[6]);
+                request.part("handphone", params[7]);
+                if (request.ok())
+                {
+                    resp = request.body();
+                }else{
+                    resp = "{RESP : 'ERROR' }";
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
+            return resp;
+        }
 
-                Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan server.", Toast.LENGTH_SHORT);
-                toast.show();
+        protected void onPostExecute(String output) {
+            Log.v("keiskeidebug", output);
+            JSONObject response = new JSONObject();
+            try {
+                response = new JSONObject(output);
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                Log.v("keiskeidebug", "loopj chat " + statusCode);
-
-                String resp = "";
-                try {
-                    resp = response.getString("RESP");
-                    if(resp.equals("SCSCHT")){
-                        String data;
-                        data = response.getString("DATA");
-                        JSONObject notif_t = new JSONObject(data);
-                        Chat chat = new Chat();
+            String resp = "";
+            try {
+                resp = response.getString("RESP");
+                if(resp.equals("SCSCHT")){
+                    String data;
+                    data = response.getString("DATA");
+                    JSONObject notif_t = new JSONObject(data);
+                    Chat chat = new Chat();
+                    try {
+                        chat.setSid(Integer.parseInt(notif_t.getString("id")));
                         try {
-                            chat.setSid(Integer.parseInt(notif_t.getString("id")));
-                            try {
-                                String name = notif_t.getString("name");
-                                chat.setName(name);
-                            }catch (Exception e){
-                                chat.setName("");
-                            };
+                            String name = notif_t.getString("name");
+                            chat.setName(name);
+                        }catch (Exception e){
+                            chat.setName("");
+                        };
 
-                            try {
-                                String description_t = notif_t.getString("description");
-                                chat.setDescription(description_t);
-                            }catch (Exception e){
-                                chat.setDescription("");
-                            };
+                        try {
+                            String description_t = notif_t.getString("description");
+                            chat.setDescription(description_t);
+                        }catch (Exception e){
+                            chat.setDescription("");
+                        };
 
-                            try {
-                                String photo_t = notif_t.getString("photo");
-                                chat.setPhotoExt(photo_t);
-                            }catch (Exception e){
-                                chat.setPhotoExt("");
-                            };
-                            try {
-                                String photo_t = notif_t.getString("path_user");
-                                chat.setPhotoInt(photo_t);
-                            }catch (Exception e){
-                                chat.setPhotoInt("");
-                            };
-                            try {
-                                String is_admin_t = notif_t.getString("is_admin");
-                                char is_admin_c = is_admin_t.charAt(0);
-                                chat.setIsAdmin(is_admin_c);
-                            }catch (Exception e){
-                                chat.setIsAdmin('0');
-                            };
-                            try {
-                                String is_admin_t = notif_t.getString("read_flag");
-                                char is_admin_c = is_admin_t.charAt(0);
-                                chat.setReadFlag(is_admin_c);
-                            }catch (Exception e){
-                                chat.setReadFlag('0');
-                            };
+                        try {
+                            String photo_t = notif_t.getString("photo");
+                            chat.setPhotoExt(photo_t);
+                        }catch (Exception e){
+                            chat.setPhotoExt("");
+                        };
+                        try {
+                            String photo_t = notif_t.getString("path_user");
+                            chat.setPhotoInt(photo_t);
+                        }catch (Exception e){
+                            chat.setPhotoInt("");
+                        };
+                        try {
+                            String is_admin_t = notif_t.getString("is_admin");
+                            char is_admin_c = is_admin_t.charAt(0);
+                            chat.setIsAdmin(is_admin_c);
+                        }catch (Exception e){
+                            chat.setIsAdmin('0');
+                        };
+                        try {
+                            String is_admin_t = notif_t.getString("read_flag");
+                            char is_admin_c = is_admin_t.charAt(0);
+                            chat.setReadFlag(is_admin_c);
+                        }catch (Exception e){
+                            chat.setReadFlag('0');
+                        };
 
-                            try {
-                                String created_at_t = notif_t.getString("created_at");
-                                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                                Date date = format.parse(created_at_t);
-                                chat.setCreatedAt(date);
-                            }catch (ParseException e){
+                        try {
+                            String created_at_t = notif_t.getString("created_at");
+                            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                            Date date = format.parse(created_at_t);
+                            chat.setCreatedAt(date);
+                        }catch (ParseException e){
 
-                                Calendar c = Calendar.getInstance();
-                                Date date = c.getTime();
-                                chat.setCreatedAt(date);
-                            }
-                            String realpath = chat.getPhotoInt();
-                            if(realpath != null || realpath.isEmpty()){
-                                File file = new File(realpath);
-                                if (file.exists()){
-                                    BitmapFactory.Options bmo = new BitmapFactory.Options();
-                                    try {
-                                        Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), bmo);
-                                        ImageHelper ih = new ImageHelper();
-                                        String path_t = ih.storeImage(getApplicationContext(), bitmap);
-                                        chat.setPhotoInt(path_t);
-                                    }catch (OutOfMemoryError e){
-                                        e.printStackTrace();
-                                    }
+                            Calendar c = Calendar.getInstance();
+                            Date date = c.getTime();
+                            chat.setCreatedAt(date);
+                        }
+                        String realpath = chat.getPhotoInt();
+                        if(realpath != null || realpath.isEmpty()){
+                            File file = new File(realpath);
+                            if (file.exists()){
+                                BitmapFactory.Options bmo = new BitmapFactory.Options();
+                                try {
+                                    Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), bmo);
+                                    ImageHelper ih = new ImageHelper();
+                                    String path_t = ih.storeImage(getApplicationContext(), bitmap);
+                                    chat.setPhotoInt(path_t);
+                                }catch (OutOfMemoryError e){
+                                    e.printStackTrace();
                                 }
                             }
-                            _chatTransact.insert(chat);
-                            displayMessage(chat);
-
-                        }catch (Exception e){
-                            Log.v("keiskeidebug", e.toString());
-                            e.printStackTrace();
                         }
+                        _chatTransact.insert(chat);
+                        displayMessage(chat);
+
+                    }catch (Exception e){
+                        Log.v("keiskeidebug", e.toString());
+                        e.printStackTrace();
                     }
-                    else if(resp.equals("FLDRGSTR")){
-                        String data;
-                        data = response.getString("MESSAGE");
-                        Toast toast = Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT);
-                        toast.show();
-                    }else{
-                        Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
-                        toast.show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
+                else if(resp.equals("FLDRGSTR")){
+                    String data;
+                    data = response.getString("MESSAGE");
+                    Toast toast = Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT);
+                    toast.show();
+                }else{
+                    Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-        });
+
+        }
+    }
+    public void sendImageLoopj(String[] params){
+        new SendImageLoopj(params).execute();
+    }
+    private class SendImageLoopj extends AsyncTask<String, Void, String> {
+        String[] params;
+        SendImageLoopj(String[] params){
+            this.params = params;
+        }
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+        protected String doInBackground(String... args) {
+            String resp = "";
+            try {
+                String url = "https://keiskei.co.id/m/chat/storetwo";
+                HttpClient request = HttpClient.post(url);
+                request.part("description", params[1]);
+                request.part("is_anonymous", params[2]);
+                request.part("gcm_id", params[3]);
+                request.part("user_id", params[4]);
+
+                request.part("name", params[6]);
+                request.part("email", params[7]);
+                request.part("handphone", params[8]);
+
+                String path = params[5];
+                Log.v("keiskeidebug", "belum " + path);
+
+
+                if(!path.isEmpty()){
+                    try
+                    {
+
+                        File temp_file = new File(path);
+                        request.part("photo", temp_file);
+                        path = "";
+                        Log.v("keiskeidebug", "masuk file " + path);
+                    }catch(Exception e){
+
+                        Log.v("keiskeidebug", "gagal file " + path);
+                    }
+                }
+                if (request.ok())
+                {
+                    resp = request.body();
+                }else{
+                    resp = "{RESP : 'ERROR' }";
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return resp;
+        }
+
+        protected void onPostExecute(String output) {
+            Log.v("keiskeidebug", output);
+            JSONObject response = new JSONObject();
+            try {
+                response = new JSONObject(output);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            String resp = "";
+            try {
+                resp = response.getString("RESP");
+                if(resp.equals("SCSCHT")){
+                    String data;
+                    data = response.getString("DATA");
+                    JSONObject notif_t = new JSONObject(data);
+                    Chat chat = new Chat();
+                    try {
+                        chat.setSid(Integer.parseInt(notif_t.getString("id")));
+                        try {
+                            String name = notif_t.getString("name");
+                            chat.setName(name);
+                        }catch (Exception e){
+                            chat.setName("");
+                        };
+
+                        try {
+                            String description_t = notif_t.getString("description");
+                            chat.setDescription(description_t);
+                        }catch (Exception e){
+                            chat.setDescription("");
+                        };
+
+                        try {
+                            String photo_t = notif_t.getString("photo");
+                            chat.setPhotoExt(photo_t);
+                        }catch (Exception e){
+                            chat.setPhotoExt("");
+                        };
+                        try {
+                            String photo_t = notif_t.getString("path_user");
+                            chat.setPhotoInt(photo_t);
+                        }catch (Exception e){
+                            chat.setPhotoInt("");
+                        };
+                        try {
+                            String is_admin_t = notif_t.getString("is_admin");
+                            char is_admin_c = is_admin_t.charAt(0);
+                            chat.setIsAdmin(is_admin_c);
+                        }catch (Exception e){
+                            chat.setIsAdmin('0');
+                        };
+                        try {
+                            String is_admin_t = notif_t.getString("read_flag");
+                            char is_admin_c = is_admin_t.charAt(0);
+                            chat.setReadFlag(is_admin_c);
+                        }catch (Exception e){
+                            chat.setReadFlag('0');
+                        };
+
+                        try {
+                            String created_at_t = notif_t.getString("created_at");
+                            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                            Date date = format.parse(created_at_t);
+                            chat.setCreatedAt(date);
+                        }catch (ParseException e){
+
+                            Calendar c = Calendar.getInstance();
+                            Date date = c.getTime();
+                            chat.setCreatedAt(date);
+                        }
+                        String realpath = chat.getPhotoInt();
+                        if(realpath != null || realpath.isEmpty()){
+                            File file = new File(realpath);
+                            if (file.exists()){
+                                BitmapFactory.Options bmo = new BitmapFactory.Options();
+                                try {
+                                    Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), bmo);
+                                    ImageHelper ih = new ImageHelper();
+                                    String path_t = ih.storeImage(getApplicationContext(), bitmap);
+                                    chat.setPhotoInt(path_t);
+                                }catch (OutOfMemoryError e){
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                        _chatTransact.insert(chat);
+                        displayMessage(chat);
+
+                    }catch (Exception e){
+                        Log.v("keiskeidebug", e.toString());
+                        e.printStackTrace();
+                    }
+                }
+                else if(resp.equals("FLDRGSTR")){
+                    String data;
+                    data = response.getString("MESSAGE");
+                    Toast toast = Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT);
+                    toast.show();
+                }else{
+                    Toast toast = Toast.makeText(getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
     public void displayMessage(Chat chat) {
 
