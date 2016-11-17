@@ -41,4 +41,8 @@ public class City {
         return this._name;
     }
 
+    @Override
+    public String toString() {
+        return getName();
+    }
 }

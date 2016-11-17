@@ -3,6 +3,10 @@ package com.keiskeismartsystem;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
+import android.text.SpannedString;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -59,7 +63,8 @@ public class ProductDetail extends AppCompatActivity implements AsyncResponse {
             nom_harga = (TextView) findViewById(R.id.nom_harga);
             nom_harga.setText("RP " + product.getHarga() + ",00");
             desc = (TextView) findViewById(R.id.desc);
-            desc.setText(product.getDescription());
+            desc.setText(Html.fromHtml(product.getDescription()));
+            Log.i("Test", product.getDescription());
             button = (Button) findViewById(R.id.cart);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override

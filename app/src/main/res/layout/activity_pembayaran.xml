@@ -88,27 +88,6 @@
                 android:layout_height="40dp"
                 android:layout_marginBottom="4dp"
                 android:spinnerMode="dropdown"></Spinner>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Biaya Pengiriman : "
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/ongkir"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" RP 10000,00"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
         </LinearLayout>
 
         <TextView
@@ -160,7 +139,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@id/ongkir"
+                    android:id="@+id/ongkir"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
@@ -196,6 +175,7 @@
                     android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -203,13 +183,14 @@
             android:text="Pilih Pembayaran"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
+
         <Spinner
             android:id="@+id/payment"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginBottom="4dp"
-            android:spinnerMode="dropdown"
-            android:layout_marginTop="8dp"></Spinner>
+            android:layout_marginTop="8dp"
+            android:spinnerMode="dropdown"></Spinner>
 
         <Button
             android:id="@+id/bayar_checkout"
@@ -217,6 +198,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:background="@color/button_green"
+            android:onClick="bayar"
             android:text="Bayar"
             android:textColor="@color/white" />
     </LinearLayout>

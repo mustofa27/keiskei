@@ -53,17 +53,19 @@ public class CartActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this,"Tidak ada koneksi internet.", Toast.LENGTH_SHORT);
             toast.show();
         }
-        bayar = (Button) findViewById(R.id.bayar);
-        total = (TextView) findViewById(R.id.total);
-        total_harga = 0;
-        _progress = new ProgressDialog(this);
-        _progress.setCancelable(true);
-        _progress.setMessage("Getting data..");
-        _progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        _progress.setProgress(0);
-        _progress.setMax(100);
-        _progress.show();
-        new LoadCart().execute();
+        else {
+            bayar = (Button) findViewById(R.id.bayar);
+            total = (TextView) findViewById(R.id.total);
+            total_harga = 0;
+            _progress = new ProgressDialog(this);
+            _progress.setCancelable(true);
+            _progress.setMessage("Getting data..");
+            _progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            _progress.setProgress(0);
+            _progress.setMax(100);
+            _progress.show();
+            new LoadCart().execute();
+        }
     }
     private class LoadCart extends AsyncTask<String, Void, String> {
 
