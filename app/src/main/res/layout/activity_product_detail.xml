@@ -26,7 +26,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:src="@drawable/logo_splash"
-                android:scaleType="fitXY"/>
+                android:adjustViewBounds="true"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
