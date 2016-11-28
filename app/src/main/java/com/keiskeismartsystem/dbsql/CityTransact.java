@@ -65,6 +65,33 @@ public class CityTransact {
         }
         return cities;
     }
+    public City first(ArrayList<WhereHelper> whereHelpers){
+        String where = "";
+        if (whereHelpers.size() == 1){
+            where += whereHelpers.get(0).getKey() + " = '" + whereHelpers.get(0).getValue() + "'";
+        }else if(whereHelpers.size() > 1){
+            for(int i = 0; i < whereHelpers.size(); i++){
+                where += whereHelpers.get(i).getKey() + "='" + whereHelpers.get(i).getValue() + "'";
+                if(i != whereHelpers.size()-1){
+                    where += " AND ";
+                }
+            }
+        }
+        DBHandler dbHandler = new DBHandler(this._context, null, null, 1);
+        Cursor cursor = dbHandler.get(TABLE_NAME, where, "");
+        if (cursor.moveToFirst()) {
+            City city = new City();
+            city.setId(Integer.parseInt(cursor.getString((cursor.getColumnIndex("id")))));
+            city.setName(cursor.getString((cursor.getColumnIndex("name"))));
+            city.setProvince(Integer.parseInt(cursor.getString((cursor.getColumnIndex("ms_province_id")))));
+            city.setSid(Integer.parseInt(cursor.getString((cursor.getColumnIndex("server_id")))));
+            dbHandler.close();
+            return city;
+        }
+        dbHandler.close();
+        return null;
+
+    }
     public long insert(City city)
     {
         DBHandler dbHandler = new DBHandler(this._context, null, null, 1);

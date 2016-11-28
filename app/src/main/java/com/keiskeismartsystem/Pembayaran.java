@@ -40,7 +40,7 @@ public class Pembayaran extends AppCompatActivity {
     private List<Provinsi> provinsis;
     private int indikator = 0,harga;
     double berat;
-    private int id_kota,id_payment,id_kurir;
+    private int id_kota,id_payment,id_kurir,firstRun = 0;
     private String _alamat,_kodepos,_service,_ongkos;
     ArrayAdapter adapter,adapter1,adapter2,adapter3,adapter4;
     UserSession userSession;
@@ -109,6 +109,14 @@ public class Pembayaran extends AppCompatActivity {
                 e.printStackTrace();
             }
             return resp;
+        }
+        private int getPos(ArrayAdapter arrayAdapter, String nama){
+            int pos = 0;
+            for(int i = 0; i <arrayAdapter.getCount(); i++){
+                if(((City)arrayAdapter.getItem(i)).getName().equals(nama))
+                    pos = i;
+            }
+            return pos;
         }
 
         protected void onPostExecute(String output) {
@@ -191,11 +199,15 @@ public class Pembayaran extends AppCompatActivity {
                     _provinsi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            ArrayList<WhereHelper> whereHelpers = new ArrayList<WhereHelper>();
-                            whereHelpers.add(new WhereHelper("ms_province_id",String.valueOf(((Provinsi) _provinsi.getSelectedItem()).getId())));
-                            List<City> cities = (new CityTransact(Pembayaran.this)).get(whereHelpers);
-                            adapter4 = new ArrayAdapter(Pembayaran.this,android.R.layout.simple_spinner_dropdown_item,cities);
-                            kota.setAdapter(adapter4);
+                            if(firstRun != 0){
+                                ArrayList<WhereHelper> whereHelpers = new ArrayList<WhereHelper>();
+                                whereHelpers.add(new WhereHelper("ms_province_id",String.valueOf(((Provinsi) _provinsi.getSelectedItem()).getId())));
+                                List<City> cities = (new CityTransact(Pembayaran.this)).get(whereHelpers);
+                                adapter4 = new ArrayAdapter(Pembayaran.this,android.R.layout.simple_spinner_dropdown_item,cities);
+                                kota.setAdapter(adapter4);
+                            }
+                            else
+                                firstRun++;
                         }
 
                         @Override
@@ -204,11 +216,15 @@ public class Pembayaran extends AppCompatActivity {
                         }
                     });
                     ArrayList<WhereHelper> whereHelpers = new ArrayList<WhereHelper>();
+                    ArrayList<WhereHelper> whereHelpers1 = new ArrayList<WhereHelper>();
                     whereHelpers.add(new WhereHelper("ms_province_id",konten.getString("provinsi")));
+                    whereHelpers1.add(new WhereHelper("server_id",konten.getString("kota")));
+                    City sel = (new CityTransact(Pembayaran.this)).first(whereHelpers1);
                     List<City> cities = (new CityTransact(Pembayaran.this)).get(whereHelpers);
                     adapter4 = new ArrayAdapter(Pembayaran.this,android.R.layout.simple_spinner_dropdown_item,cities);
                     kota.setAdapter(adapter4);
-                    kota.setSelection(konten.getInt("kota")-1);
+                    int pos = getPos(adapter4,sel.getName());
+                    kota.setSelection(pos);
                     kota.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
