@@ -218,101 +218,128 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
 
         }
     }
-    public void sendImageLoopj(String[] params){
-        RequestParams data = new RequestParams();
-        data.put("id", params[1]);
-        data.put("name", params[2]);
-        data.put("email", params[3]);
-        data.put("handphone", params[4]);
-        data.put("pinbb", params[5]);
+    private class SendImageLoopjDua extends AsyncTask<String, Void, String> {
+        String[] params;
+        SendImageLoopjDua(String[] params){
+            this.params = params;
+        }
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+        protected String doInBackground(String... args) {
+            String resp = "";
+            try {
+                String url = "https://keiskei.co.id/m/chat/storetwo";
+                HttpClient request = HttpClient.post(url);
+                request.connectTimeout(5000);
+                request.readTimeout(25000);
+                request.part("id", params[1]);
+                request.part("name", params[2]);
+                request.part("email", params[3]);
+                request.part("handphone", params[4]);
+                request.part("pinbb", params[5]);
 
-        data.put("website", params[7]);
-        data.put("instagram", params[8]);
-        data.put("facebook", params[9]);
+                request.part("website", params[7]);
+                request.part("instagram", params[8]);
+                request.part("facebook", params[9]);
 
-        String path = params[6];
+                String path = params[6];
 
-        if(!path.isEmpty()){
-            try
-            {
-                File temp_file = new File(path);
-                data.put("photo", temp_file);
-                path = "";
-            }catch(Exception e){
-                Log.v("keiskeidebug", "salah loklsadf");
+                if(!path.isEmpty()){
+                    try
+                    {
+                        File temp_file = new File(path);
+                        request.part("photo", temp_file);
+                        path = "";
+                    }catch(Exception e){
+                        Log.v("keiskeidebug", "salah loklsadf");
+                    }
+                }
+                if (request.ok())
+                {
+                    resp = request.body();
+                }else{
+                    resp = "{RESP : 'ERROR' }";
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return resp;
+        }
+
+        protected void onPostExecute(String output) {
+            Log.v("keiskeidebug", output);
+            JSONObject response = new JSONObject();
+            try {
+                response = new JSONObject(output);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            String resp = "";
+            try {
+                resp = response.getString("RESP");
+                if(resp.equals("SCSUPDTPRFL")){
+                    _progress.dismiss();
+
+                    String data;
+                    data = response.getString("DATA");
+                    JSONObject user_t = new JSONObject(data);
+                    User user = new User();
+                    int total = Integer.parseInt(response.getString("TOTAL_BUY"));
+                    try {
+                        user.setID(Integer.parseInt(user_t.getString("id")));
+                        user.setCode(user_t.getString("code"));
+                        user.setEmail(user_t.getString("email"));
+                        user.setName(user_t.getString("name"));
+                        user.setUsername(user_t.getString("username"));
+                        user.setGCMID(user_t.getString("gcm_id"));
+                        String _gender = user_t.getString("gender");
+                        user.setGender(_gender.charAt(0));
+                        user.setTelephone(user_t.getString("mobile"));
+                        user.setAddress(user_t.getString("address"));
+                        user.setPhoto(user_t.getString("photo"));
+                        user.setTotalBought(total);
+                        user.setPinBB(user_t.getString("pinbb"));
+                        user.setWebsite(user_t.getString("website"));
+                        user.setInstagram(user_t.getString("instagram"));
+                        user.setFB(user_t.getString("facebook"));
+                        user.setBonus(user_t.getString("bonus"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        Log.v("keiskeidebug", "error di profil");
+                    }
+                    Log.v("keiskeidebug", "sukses di profil");
+
+                    _us.updateUserSession(user);
+                    Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Profil berhasil diperbarui.", Toast.LENGTH_SHORT);
+                    toast.show();
+                    Bundle bundle = new Bundle();
+
+                    ((MainActivity) getActivity()).changeFragment("profile_fragment", _rootView, bundle);
+
+                }else if(resp.equals("FLDUPDTPRFL")){
+                    String data;
+                    data = response.getString("MESSAGE");
+                    _progress.dismiss();
+                    Toast toast = Toast.makeText(getActivity().getApplicationContext(), data, Toast.LENGTH_SHORT);
+                    toast.show();
+                }else{
+                    _progress.dismiss();
+                    Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
+                toast.show();
+                _progress.dismiss();
             }
         }
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.post( "https://keiskei.co.id/m/updateprofiletwo", data, new JsonHttpResponseHandler(){
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                String resp = "";
-                try {
-                    resp = response.getString("RESP");
-                    if(resp.equals("SCSUPDTPRFL")){
-                        _progress.dismiss();
-
-                        String data;
-                        data = response.getString("DATA");
-                        JSONObject user_t = new JSONObject(data);
-                        User user = new User();
-                        int total = Integer.parseInt(response.getString("TOTAL_BUY"));
-                        try {
-                            user.setID(Integer.parseInt(user_t.getString("id")));
-                            user.setCode(user_t.getString("code"));
-                            user.setEmail(user_t.getString("email"));
-                            user.setName(user_t.getString("name"));
-                            user.setUsername(user_t.getString("username"));
-                            user.setGCMID(user_t.getString("gcm_id"));
-                            String _gender = user_t.getString("gender");
-                            user.setGender(_gender.charAt(0));
-                            user.setTelephone(user_t.getString("mobile"));
-                            user.setAddress(user_t.getString("address"));
-                            user.setPhoto(user_t.getString("photo"));
-                            user.setTotalBought(total);
-                            user.setPinBB(user_t.getString("pinbb"));
-                            user.setWebsite(user_t.getString("website"));
-                            user.setInstagram(user_t.getString("instagram"));
-                            user.setFB(user_t.getString("facebook"));
-                            user.setBonus(user_t.getString("bonus"));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Log.v("keiskeidebug", "error di profil");
-                        }
-                        Log.v("keiskeidebug", "sukses di profil");
-
-                        _us.updateUserSession(user);
-                        Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Profil berhasil diperbarui.", Toast.LENGTH_SHORT);
-                        toast.show();
-                        Bundle bundle = new Bundle();
-
-                        ((MainActivity) getActivity()).changeFragment("profile_fragment", _rootView, bundle);
-
-                    }else if(resp.equals("FLDUPDTPRFL")){
-                        String data;
-                        data = response.getString("MESSAGE");
-                        _progress.dismiss();
-                        Toast toast = Toast.makeText(getActivity().getApplicationContext(), data, Toast.LENGTH_SHORT);
-                        toast.show();
-                    }else{
-                        _progress.dismiss();
-                        Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT);
-                        toast.show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                super.onSuccess(statusCode, headers, response);
-            }
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                _progress.dismiss();
-                Toast toast = Toast.makeText(getActivity().getApplicationContext(),statusCode + "Terjadi kesalahan.", Toast.LENGTH_SHORT);
-                toast.show();
-            }
-        });
-
-
+    }
+    public void sendImageLoopj(String[] params){
+        new SendImageLoopjDua(params).execute();
     }
     private  boolean isValidHandphone(String name_t){
         if (name_t != null && name_t.length() > 5) {

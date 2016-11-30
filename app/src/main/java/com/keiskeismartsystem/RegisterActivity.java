@@ -147,6 +147,8 @@ public class RegisterActivity extends AppCompatActivity implements AsyncResponse
             FileOutputStream fout = null;
             String resp = "";
             HttpClient request = HttpClient.get(params[0]);
+            request.connectTimeout(5000);
+            request.readTimeout(10000);
             if (request.ok())
             {
                 resp = request.body();

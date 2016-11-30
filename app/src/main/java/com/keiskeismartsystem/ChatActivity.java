@@ -317,6 +317,8 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
             try {
                 String url = "https://keiskei.co.id/m/chat/storetwo";
                 HttpClient request = HttpClient.post(url);
+                request.connectTimeout(5000);
+                request.readTimeout(15000);
                 request.part("description", params[1]);
                 request.part("is_anonymous", params[2]);
                 request.part("gcm_id", params[3]);
@@ -462,6 +464,8 @@ public class ChatActivity extends AppCompatActivity implements AsyncResponse {
             try {
                 String url = "https://keiskei.co.id/m/chat/storetwo";
                 HttpClient request = HttpClient.post(url);
+                request.connectTimeout(5000);
+                request.readTimeout(25000);
                 request.part("description", params[1]);
                 request.part("is_anonymous", params[2]);
                 request.part("gcm_id", params[3]);

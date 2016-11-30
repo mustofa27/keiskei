@@ -98,6 +98,8 @@ public class Pembayaran extends AppCompatActivity {
             try {
                 String url = _base_url + "m/checkout/" + userSession.getUserSessionData().getID();
                 HttpClient request = HttpClient.get(url);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 if (request.ok())
                 {
                     resp = request.body();
@@ -281,6 +283,8 @@ public class Pembayaran extends AppCompatActivity {
             try {
                 String url = _base_url + "m/shipping/" + id + "/" + berat;
                 HttpClient request = HttpClient.get(url);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 if (request.ok())
                 {
                     resp = request.body();
@@ -370,6 +374,8 @@ public class Pembayaran extends AppCompatActivity {
             try {
                 String url = _base_url + "m/bayar";
                 HttpClient request = HttpClient.post(url);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 request.part("id", userSession.getUserSessionData().getID());
                 request.part("id_kota", id_kota);
                 request.part("alamat", _alamat);
@@ -378,6 +384,8 @@ public class Pembayaran extends AppCompatActivity {
                 request.part("service", _service);
                 request.part("ongkir", _ongkos);
                 request.part("payment", id_payment);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 if (request.ok())
                 {
                     resp = request.body();

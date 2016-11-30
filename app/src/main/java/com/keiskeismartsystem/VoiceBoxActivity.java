@@ -220,6 +220,8 @@ public class VoiceBoxActivity extends AppCompatActivity implements AsyncResponse
             try {
                 String url = "https://keiskei.co.id/m/voicebox/storetwo";
                 HttpClient request = HttpClient.post(url);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 request.part("name", params[1]);
                 request.part("email", params[2]);
                 request.part("handphone", params[3]);

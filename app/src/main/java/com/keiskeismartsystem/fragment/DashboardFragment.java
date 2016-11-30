@@ -204,6 +204,8 @@ public class DashboardFragment extends Fragment {
             try {
                 String url = _base_url + "m/product/hot/"+_user.getID();
                 HttpClient request = HttpClient.get(url);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 if (request.ok())
                 {
                     resp = request.body();

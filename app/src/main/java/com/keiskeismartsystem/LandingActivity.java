@@ -269,6 +269,8 @@ public class LandingActivity extends AppCompatActivity {
             FileOutputStream fout = null;
             String resp = "";
             HttpClient request = HttpClient.get(params[0]);
+            request.connectTimeout(5000);
+            request.readTimeout(10000);
             if (request.ok())
             {
                 resp = request.body();
@@ -372,6 +374,8 @@ public class LandingActivity extends AppCompatActivity {
             String resp = "";
             String url = _base_url + args[0];
             HttpClient request = HttpClient.post(url);
+            request.connectTimeout(5000);
+            request.readTimeout(10000);
             request.part("gcm_id", args[1]);
             request.part("is_anonymous", args[2]);
             request.part("user_id", args[3]);

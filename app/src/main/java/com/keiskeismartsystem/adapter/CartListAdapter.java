@@ -134,6 +134,8 @@ public class CartListAdapter extends ArrayAdapter<Product> {
             try {
                 String url = _base_url + "m/cart/del/" + userSession.getUserSessionData().getID() + "/" + id;
                 HttpClient request = HttpClient.get(url);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 if (request.ok())
                 {
                     resp = request.body();
@@ -189,6 +191,8 @@ public class CartListAdapter extends ArrayAdapter<Product> {
             try {
                 String url = _base_url + "m/cart/edit/" + userSession.getUserSessionData().getID() + "/" + product.getSid() + "/" + jumlah;
                 HttpClient request = HttpClient.get(url);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 if (request.ok())
                 {
                     resp = request.body();

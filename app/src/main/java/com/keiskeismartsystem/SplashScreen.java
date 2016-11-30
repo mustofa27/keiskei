@@ -65,6 +65,8 @@ public class SplashScreen extends Activity {
                     url = _base_url + "m/product/get/" + userSession.getUserSessionData().getID();
                 }
                 HttpClient request = HttpClient.get(url);
+                request.connectTimeout(5000);
+                request.readTimeout(10000);
                 if (request.ok())
                 {
                     resp = request.body();

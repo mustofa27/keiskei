@@ -36,6 +36,8 @@ public class ClientSocket extends AsyncTask<String, Void, String> {
                 case "LOGIN":
                     String url = _base_url + "m/login";
                     HttpClient request = HttpClient.post(url);
+                    request.connectTimeout(5000);
+                    request.readTimeout(10000);
                     request.part("username", args[1]);
                     request.part("password", args[2]);
                     request.part("gcm_id", args[3]);
@@ -49,6 +51,8 @@ public class ClientSocket extends AsyncTask<String, Void, String> {
                 case "REGISTER":
                     url = _base_url + "m/register";
                     request = HttpClient.post(url);
+                    request.connectTimeout(5000);
+                    request.readTimeout(10000);
                     request.part("username", args[1]);
                     request.part("email", args[2]);
                     request.part("handphone", args[3]);
@@ -64,6 +68,8 @@ public class ClientSocket extends AsyncTask<String, Void, String> {
                     url = _base_url + "m/updateprofile";
                     Log.v("keiskeidebug", url);
                     request = HttpClient.post(url);
+                    request.connectTimeout(5000);
+                    request.readTimeout(10000);
                     request.part("id",  args[1]);
                     request.part("name",  args[2]);
                     request.part("email",  args[3]);
@@ -83,6 +89,8 @@ public class ClientSocket extends AsyncTask<String, Void, String> {
                     url = _base_url + "m/cart/set/"+args[1]+"/"+args[2];
                     Log.v("keiskeidebug", url);
                     request = HttpClient.get(url);
+                    request.connectTimeout(5000);
+                    request.readTimeout(10000);
                     if (request.ok())
                     {
                         resp = request.body();
@@ -94,6 +102,8 @@ public class ClientSocket extends AsyncTask<String, Void, String> {
                     url = _base_url + "m/voicebox/store";
                     Log.v("keiskeidebug", url);
                     request = HttpClient.post(url);
+                    request.connectTimeout(5000);
+                    request.readTimeout(10000);
                     request.part("name",  args[1]);
                     request.part("email",  args[2]);
                     request.part("handphone",  args[3]);
@@ -114,6 +124,8 @@ public class ClientSocket extends AsyncTask<String, Void, String> {
                     url = _base_url + "m/chat/store";
                     Log.v("keiskeidebug gg", url);
                     request = HttpClient.post(url);
+                    request.connectTimeout(5000);
+                    request.readTimeout(10000);
                     request.part("description",  args[1]);
                     request.part("is_anonymous",  args[2]);
                     request.part("gcm_id",  args[3]);
