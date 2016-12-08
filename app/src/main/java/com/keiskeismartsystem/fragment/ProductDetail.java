@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -119,7 +120,7 @@ public class ProductDetail extends Fragment implements AsyncResponse {
             nom_harga = (TextView) rootView.findViewById(R.id.nom_harga);
             nom_harga.setText("RP " + product.getHarga() + ",00");
             desc = (TextView) rootView.findViewById(R.id.desc);
-            desc.setText(product.getDescription());
+            desc.setText(Html.fromHtml(product.getDescription()));
             button = (Button) rootView.findViewById(R.id.cart);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
