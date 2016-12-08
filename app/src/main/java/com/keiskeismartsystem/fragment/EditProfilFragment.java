@@ -59,7 +59,7 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
     private static String imgDecodableString, temp_path = "";
     private static boolean is_change_photo = false;
     private ProgressDialog _progress;
-    Bitmap bitmap_t;
+    Bitmap bitmap_t,user_bitmap;
     UserSession _us;
     User user;
     private static ConnectionDetector _conn;
@@ -203,9 +203,9 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
 //                }
                 String id = Integer.toString(user.getID());
 
-                String[] params = new String[]{ "UPDATE_PROFILE",id, name, email, handphone, pinbb, temp_path, website, instagram, facebook };
+                String[] params = new String[]{ "UPDATE_PROFILE",id, name, email, handphone, pinbb, imgDecodableString, website, instagram, facebook };
                 sendImageLoopj(params);
-                temp_path = "";
+                //temp_path = "";
             }else{
 
                 String id = Integer.toString(user.getID());
@@ -230,7 +230,7 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
         protected String doInBackground(String... args) {
             String resp = "";
             try {
-                String url = "https://keiskei.co.id/m/chat/storetwo";
+                String url = "https://keiskei.co.id/m/updateprofiletwo";
                 HttpClient request = HttpClient.post(url);
                 request.connectTimeout(5000);
                 request.readTimeout(25000);
@@ -247,14 +247,15 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
                 String path = params[6];
 
                 if(!path.isEmpty()){
-                    try
+                    request.part("photo", path);
+                    /*try
                     {
                         File temp_file = new File(path);
                         request.part("photo", temp_file);
                         path = "";
                     }catch(Exception e){
                         Log.v("keiskeidebug", "salah loklsadf");
-                    }
+                    }*/
                 }
                 if (request.ok())
                 {
@@ -301,6 +302,7 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
                         user.setAddress(user_t.getString("address"));
                         user.setPhoto(user_t.getString("photo"));
                         user.setTotalBought(total);
+                        user.setPathUserInt(temp_path);
                         user.setPinBB(user_t.getString("pinbb"));
                         user.setWebsite(user_t.getString("website"));
                         user.setInstagram(user_t.getString("instagram"));
@@ -397,11 +399,10 @@ public class EditProfilFragment extends Fragment  implements AsyncResponse {
                 Log.v("keiskeidebug", "path image : " + path);
                 Bitmap icon = BitmapFactory
                         .decodeFile(path);
-
                 ImageHelper ih = new ImageHelper();
+                imgDecodableString = ih.BitMapToString(icon);
                 icon = ih.resizeBitmap(icon, 160, 160);
                 icon = ih.getRoundedCornerBitmap(icon, 120);
-                imgDecodableString = ih.BitMapToString(icon);
                 _iv_user.setImageBitmap(icon);
                 is_change_photo = true;
             } else {
